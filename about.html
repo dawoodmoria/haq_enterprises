@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#001122"/>
+  <title>Haq Enterprises — About Us</title>
+  <meta name="description" content="Established in 2004. Haq Enterprises is a documentation-led institutional supplier of medical, pharmaceutical, surgical, and general supplies across Pakistan."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="about.html"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ═══════════════════════════════════════════════════════
+       HAQ ENTERPRISES — ABOUT PAGE
+       System: Dark Institutional Luxury
+    ═══════════════════════════════════════════════════════ */
+    :root {
+      --ink:          #040810;
+      --ink-2:        #090e1a;
+      --ink-3:        #0f1828;
+      --navy:         #001F3F;
+      --navy-2:       #002a56;
+      --navy-3:       #003470;
+      --forest:       #012a1a;
+      --forest-2:     #013d26;
+      --forest-3:     #016040;
+      --platinum:     #dde4ed;
+      --gold:         #c9a84c;
+      --gold-2:       #e2c26a;
+      --gold-light:   #f5e6b8;
+      --white:        #ffffff;
+      --glass:        rgba(255,255,255,0.045);
+      --glass-2:      rgba(255,255,255,0.08);
+      --glass-b:      rgba(255,255,255,0.10);
+      --ease:         cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--ink); color: var(--platinum); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--ink-2); }
+    ::-webkit-scrollbar-thumb { background: var(--navy-3); border-radius: 3px; }
+    ::selection { background: rgba(201,168,76,0.25); color: var(--white); }
+    a { text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container { max-width: 1260px; margin: 0 auto; padding: 0 40px; }
+    .section { padding: 100px 0; }
+    @media (max-width:768px) { .container { padding: 0 20px; } .section { padding: 72px 0; } }
+
+    /* ── Nav ── */
+    .nav { position: sticky; top: 0; z-index: 999; background: rgba(4,8,16,0.88); backdrop-filter: blur(20px) saturate(160%); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; }
+    .nav-brand-name { font-size: 15px; font-weight: 700; color: var(--white); line-height: 1; }
+    .nav-brand-sub { font-size: 10px; color: rgba(255,255,255,0.38); letter-spacing: 0.05em; margin-top: 3px; }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a { padding: 8px 13px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.55); transition: color .2s, background .2s; }
+    .nav-links a:hover { color: var(--white); background: var(--glass); }
+    .nav-links a.active { color: var(--white); background: var(--glass-2); }
+    .nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; border-radius: 9px; background: linear-gradient(135deg, var(--forest-2), var(--navy-2)); color: var(--white); font-size: 13px; font-weight: 600; border: 1px solid rgba(255,255,255,0.13); box-shadow: 0 4px 14px rgba(0,0,0,0.35); transition: transform .2s var(--ease), box-shadow .2s; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.45); color: var(--white); }
+    @media (max-width:900px) { .nav-links { display: none; } .nav-cta { display: none; } }
+
+    /* ── Type ── */
+    .s-label { display: inline-flex; align-items: center; gap: 10px; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .s-label::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+    .s-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4.5vw, 54px); font-weight: 600; line-height: 1.07; letter-spacing: -0.02em; color: var(--white); margin-bottom: 16px; }
+    .s-sub { font-size: 16px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.42); }
+
+    /* ── Buttons ── */
+    .btn-primary { display: inline-flex; align-items: center; gap: 9px; padding: 14px 26px; border-radius: 10px; background: linear-gradient(135deg, var(--forest-2), var(--navy-2)); color: var(--white); font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 600; border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 8px 28px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08); transition: transform .25s var(--ease), box-shadow .25s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 50px rgba(1,61,38,0.25); color: var(--white); }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 9px; padding: 14px 26px; border-radius: 10px; background: var(--glass); border: 1px solid var(--glass-b); color: rgba(255,255,255,0.7); font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 600; transition: color .2s, background .2s, transform .2s; }
+    .btn-ghost:hover { color: var(--white); background: var(--glass-2); transform: translateY(-2px); }
+
+    /* ── Reveal ── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-1 { transition-delay: .10s; } .reveal-2 { transition-delay: .20s; } .reveal-3 { transition-delay: .30s; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } * { animation: none !important; } }
+
+    /* ══════════════════════════════════════ HERO ══════════════════════════════════════ */
+    .page-hero { position: relative; overflow: hidden; padding: 120px 0 100px; min-height: 50vh; display: flex; align-items: center; }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 90% 80% at 50% -10%, rgba(0,52,112,0.72), transparent 58%), radial-gradient(ellipse 60% 50% at 0% 90%, rgba(1,61,38,0.5), transparent 55%), radial-gradient(ellipse 50% 45% at 100% 80%, rgba(0,32,63,0.55), transparent 55%), linear-gradient(180deg, #050a14 0%, #040810 60%, #060d10 100%); }
+    .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px); background-size: 72px 72px; mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 15%, transparent 72%); }
+    .hero-orb-a { position: absolute; width: 600px; height: 600px; top: -200px; right: -100px; border-radius: 50%; background: radial-gradient(circle, rgba(0,52,112,0.3), transparent 65%); filter: blur(80px); pointer-events: none; animation: driftA 22s ease-in-out infinite alternate; }
+    .hero-orb-b { position: absolute; width: 400px; height: 400px; bottom: -80px; left: -60px; border-radius: 50%; background: radial-gradient(circle, rgba(1,61,38,0.28), transparent 65%); filter: blur(70px); pointer-events: none; animation: driftB 28s ease-in-out infinite alternate-reverse; }
+    @keyframes driftA { from{transform:translate(0,0)} to{transform:translate(30px,20px)} }
+    @keyframes driftB { from{transform:translate(0,0)} to{transform:translate(-25px,15px)} }
+    .hero-content { position: relative; z-index: 2; width: 100%; }
+    .hero-inner { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: end; }
+    @media (max-width:768px) { .hero-inner { grid-template-columns: 1fr; } }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 7px 16px; border-radius: 999px; border: 1px solid rgba(201,168,76,0.28); background: rgba(201,168,76,0.07); font-size: 11px; font-weight: 600; color: var(--gold-light); letter-spacing: 0.13em; text-transform: uppercase; margin-bottom: 24px; animation: slideUp 0.9s var(--ease-out) both; }
+    .eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); animation: blink 2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.35} }
+    .hero-h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 6.5vw, 80px); font-weight: 600; line-height: 1.02; letter-spacing: -0.025em; color: var(--white); margin-bottom: 20px; animation: slideUp 0.9s var(--ease-out) 0.1s both; }
+    .hero-h1 em { font-style: italic; background: linear-gradient(130deg, var(--gold-light), var(--gold), #d4a83a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub { font-size: 17px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.48); max-width: 540px; animation: slideUp 0.9s var(--ease-out) 0.2s both; }
+    .hero-statbar { display: flex; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.025); backdrop-filter: blur(10px); margin-top: 52px; animation: slideUp 0.9s var(--ease-out) 0.4s both; }
+    .hstat { flex: 1; padding: 22px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.07); }
+    .hstat:last-child { border-right: none; }
+    .hstat-n { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: var(--white); line-height: 1; letter-spacing: -0.03em; }
+    .hstat-n span { color: var(--gold); }
+    .hstat-l { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.35); letter-spacing: 0.09em; text-transform: uppercase; margin-top: 6px; }
+    @media (max-width:640px) { .hero-statbar { flex-wrap: wrap; } .hstat { flex: 1 1 50%; } .hstat:nth-child(2) { border-right: none; } .hstat:nth-child(1),.hstat:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.07); } }
+    @keyframes slideUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:none} }
+
+    /* ══════════════════════════════════════ STORY ══════════════════════════════════════ */
+    .story-section { background: var(--ink); }
+    .story-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .story-cols.rev { direction: rtl; }
+    .story-cols.rev > * { direction: ltr; }
+    @media (max-width:900px) { .story-cols { grid-template-columns: 1fr; gap: 40px; } .story-cols.rev { direction: ltr; } }
+
+    .story-visual { position: relative; border-radius: 28px; overflow: hidden; background: linear-gradient(145deg, rgba(0,52,112,0.45), rgba(1,61,38,0.3) 50%, rgba(9,14,26,0.9)); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 40px 100px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.06); padding: 44px 40px; min-height: 340px; display: flex; flex-direction: column; justify-content: flex-end; }
+    .story-visual::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent); }
+    .sv-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px); background-size: 40px 40px; }
+    .sv-orb { position: absolute; width: 280px; height: 280px; top: -80px; right: -60px; border-radius: 50%; background: radial-gradient(circle, rgba(0,52,112,0.35), transparent 65%); filter: blur(60px); }
+    .sv-orb2 { position: absolute; width: 200px; height: 200px; bottom: -40px; left: -40px; border-radius: 50%; background: radial-gradient(circle, rgba(1,61,38,0.3), transparent 65%); filter: blur(50px); }
+    .sv-yr { position: absolute; top: 40px; right: 40px; font-family: 'DM Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.22); letter-spacing: 0.08em; }
+    .sv-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 999px; background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.22); font-size: 11px; font-weight: 600; color: var(--gold-light); letter-spacing: 0.08em; margin-bottom: 16px; }
+    .sv-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px rgba(201,168,76,0.6); animation: blink 2s ease-in-out infinite; }
+    .sv-h { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; color: var(--white); line-height: 1.15; margin-bottom: 10px; position: relative; z-index: 1; }
+    .sv-sub { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.42); line-height: 1.65; position: relative; z-index: 1; }
+    .sv-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.06); border-radius: 14px; overflow: hidden; margin-top: 28px; position: relative; z-index: 1; }
+    .svs { background: rgba(9,14,26,0.6); padding: 14px 16px; text-align: center; }
+    .svs-n { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; color: var(--white); letter-spacing: -0.02em; line-height: 1; }
+    .svs-n span { color: var(--gold); }
+    .svs-l { font-size: 9px; font-weight: 600; color: rgba(255,255,255,0.32); text-transform: uppercase; letter-spacing: 0.09em; margin-top: 5px; }
+
+    .story-body { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.52); margin-bottom: 20px; }
+    .story-body strong { color: rgba(255,255,255,0.82); font-weight: 600; }
+    .story-attrs { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; }
+    .story-attr { display: flex; align-items: flex-start; gap: 14px; padding: 14px 18px; border-radius: 14px; background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.06); transition: background .2s, border-color .2s, transform .2s; }
+    .story-attr:hover { background: rgba(255,255,255,0.05); border-color: rgba(201,168,76,0.18); transform: translateX(4px); }
+    .sa-ico { width: 36px; height: 36px; border-radius: 10px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0,52,112,0.45), rgba(1,61,38,0.32)); border: 1px solid rgba(255,255,255,0.09); color: var(--gold-light); }
+    .sa-h { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 2px; }
+    .sa-t { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.38); line-height: 1.5; }
+
+    /* ══════════════════════════════════════ TIMELINE ══════════════════════════════════════ */
+    .tl { display: flex; flex-direction: column; padding-left: 16px; position: relative; }
+    .tl::before { content: ''; position: absolute; left: 36px; top: 20px; bottom: 20px; width: 1px; background: linear-gradient(180deg, rgba(201,168,76,0.4), rgba(255,255,255,0.04)); }
+    .tl-item { display: flex; gap: 22px; align-items: flex-start; margin-bottom: 28px; }
+    .tl-dot { width: 40px; height: 40px; border-radius: 50%; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--navy-3), var(--forest-2)); border: 1px solid rgba(201,168,76,0.25); font-family: 'DM Mono', monospace; font-size: 9px; color: var(--gold-light); position: relative; z-index: 1; box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
+    .tl-yr { font-size: 10px; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; padding-top: 8px; }
+    .tl-h { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.82); margin-bottom: 4px; }
+    .tl-t { font-size: 12.5px; font-weight: 300; color: rgba(255,255,255,0.38); line-height: 1.6; }
+
+    /* ══════════════════════════════════════ MISSION/VISION ══════════════════════════════════════ */
+    .mv-section { background: linear-gradient(180deg, var(--ink) 0%, #07101a 50%, var(--ink) 100%); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; }
+    @media (max-width:768px) { .mv-grid { grid-template-columns: 1fr; } }
+
+    .mv-card { position: relative; overflow: hidden; border-radius: 24px; padding: 44px 40px; border: 1px solid rgba(255,255,255,0.08); transition: transform .34s var(--ease), box-shadow .34s, border-color .34s; }
+    .mv-card::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.45), transparent); opacity: 0; transition: opacity .34s; }
+    .mv-card:hover { transform: translateY(-5px); border-color: rgba(201,168,76,0.18); }
+    .mv-card:hover::before { opacity: 1; }
+    .mv-mission { background: linear-gradient(145deg, rgba(0,52,112,0.38), rgba(9,14,26,0.9)); box-shadow: 0 24px 70px rgba(0,52,112,0.2); }
+    .mv-vision { background: linear-gradient(145deg, rgba(1,61,38,0.35), rgba(9,14,26,0.9)); box-shadow: 0 24px 70px rgba(1,61,38,0.18); }
+    .mv-orb { position: absolute; width: 240px; height: 240px; border-radius: 50%; filter: blur(60px); pointer-events: none; }
+    .mv-mission .mv-orb { background: radial-gradient(circle, rgba(0,52,112,0.4), transparent 65%); top: -80px; right: -60px; }
+    .mv-vision .mv-orb { background: radial-gradient(circle, rgba(1,61,38,0.38), transparent 65%); bottom: -80px; left: -60px; }
+    .mv-ico { width: 52px; height: 52px; border-radius: 15px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1); color: var(--gold-light); margin-bottom: 24px; position: relative; z-index: 1; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .mv-mission .mv-ico { background: linear-gradient(135deg, rgba(0,52,112,0.6), rgba(0,42,86,0.4)); }
+    .mv-vision .mv-ico { background: linear-gradient(135deg, rgba(1,61,38,0.6), rgba(1,42,26,0.4)); }
+    .mv-tag { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 999px; font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; position: relative; z-index: 1; }
+    .mv-mission .mv-tag { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.22); color: #93c5fd; }
+    .mv-vision .mv-tag { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.22); color: #86efac; }
+    .mv-h { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--white); margin-bottom: 12px; line-height: 1.15; position: relative; z-index: 1; }
+    .mv-body { font-size: 14px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.48); position: relative; z-index: 1; }
+    .mv-pillars { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; position: relative; z-index: 1; }
+    .mv-pillar { display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: rgba(255,255,255,0.55); }
+    .mv-pillar::before { content: ''; width: 6px; height: 6px; border-radius: 50%; flex: 0 0 auto; }
+    .mv-mission .mv-pillar::before { background: #60a5fa; box-shadow: 0 0 6px rgba(59,130,246,0.5); }
+    .mv-vision .mv-pillar::before { background: #4ade80; box-shadow: 0 0 6px rgba(34,197,94,0.5); }
+
+    .mv-quote { position: relative; overflow: hidden; border-radius: 20px; padding: 40px 44px; border: 1px solid rgba(255,255,255,0.08); background: rgba(9,14,26,0.7); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; grid-column: 1 / -1; }
+    .mv-quote::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.45), transparent); }
+    .mv-q-text { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: rgba(255,255,255,0.6); line-height: 1.55; margin-bottom: 18px; max-width: 700px; }
+    .mv-q-attr { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.25); letter-spacing: 0.15em; text-transform: uppercase; }
+
+    /* ══════════════════════════════════════ OPS CARDS ══════════════════════════════════════ */
+    .ops-section { background: var(--ink); }
+    .ops-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 56px; }
+    @media (max-width:900px) { .ops-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width:560px) { .ops-grid { grid-template-columns: 1fr; } }
+
+    .ops-card { position: relative; overflow: hidden; border-radius: 22px; padding: 32px 28px 34px; background: rgba(9,14,26,0.75); border: 1px solid rgba(255,255,255,0.08); transition: transform .34s var(--ease), box-shadow .34s, border-color .34s; }
+    .ops-card::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.45), transparent); opacity: 0; transition: opacity .34s; }
+    .ops-card:hover { transform: translateY(-5px); box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 60px rgba(0,52,112,0.18); border-color: rgba(201,168,76,0.18); }
+    .ops-card:hover::before { opacity: 1; }
+    .ops-strip { position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .s-blue { background: linear-gradient(90deg, #3b82f6, #1d4ed8); }
+    .s-green { background: linear-gradient(90deg, #22c55e, #16a34a); }
+    .s-gold { background: linear-gradient(90deg, var(--gold), var(--gold-2)); }
+    .ops-ico { width: 52px; height: 52px; border-radius: 15px; margin-bottom: 22px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0,52,112,0.45), rgba(1,61,38,0.32)); border: 1px solid rgba(255,255,255,0.1); color: var(--gold-light); box-shadow: 0 8px 24px rgba(0,0,0,0.35); transition: box-shadow .34s, transform .34s; }
+    .ops-card:hover .ops-ico { box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 24px rgba(201,168,76,0.18); transform: scale(1.04); }
+    .ops-num { position: absolute; top: 22px; right: 22px; font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.18); letter-spacing: 0.06em; }
+    .ops-h { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--white); margin-bottom: 6px; line-height: 1.2; }
+    .ops-sub { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.3); letter-spacing: 0.10em; text-transform: uppercase; margin-bottom: 14px; }
+    .ops-body { font-size: 13.5px; font-weight: 300; line-height: 1.72; color: rgba(255,255,255,0.45); margin-bottom: 18px; }
+    .ops-bullets { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .ops-bullets li { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: rgba(255,255,255,0.52); }
+    .ops-bullets li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; flex: 0 0 auto; background: var(--forest-3); box-shadow: 0 0 6px rgba(1,96,64,0.4); }
+
+    /* ══════════════════════════════════════ COMPLIANCE ══════════════════════════════════════ */
+    .comp-section { background: linear-gradient(180deg, var(--ink) 0%, #07101a 100%); border-top: 1px solid rgba(255,255,255,0.05); }
+    .comp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    @media (max-width:900px) { .comp-cols { grid-template-columns: 1fr; gap: 48px; } }
+
+    .comp-list { display: flex; flex-direction: column; gap: 10px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 16px 20px; border-radius: 14px; background: rgba(255,255,255,0.028); border: 1px solid rgba(255,255,255,0.07); transition: background .2s, border-color .2s; }
+    .cl-item:hover { background: rgba(255,255,255,0.05); border-color: rgba(201,168,76,0.2); }
+    .cl-chk { width: 32px; height: 32px; border-radius: 10px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; background: rgba(1,96,64,0.15); border: 1px solid rgba(1,96,64,0.25); color: #4ade80; }
+    .cl-name { font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.85); }
+    .cl-det { font-size: 10.5px; font-weight: 300; color: rgba(255,255,255,0.38); margin-top: 2px; font-family: 'DM Mono', monospace; }
+
+    .comp-vis { background: rgba(9,14,26,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 40px 36px; position: relative; overflow: hidden; box-shadow: 0 24px 70px rgba(0,0,0,0.5); }
+    .comp-vis::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent); }
+    .cv-orb { position: absolute; width: 300px; height: 300px; right: -60px; top: -60px; border-radius: 50%; background: radial-gradient(circle, rgba(0,52,112,0.22), transparent 65%); filter: blur(50px); pointer-events: none; }
+    .cv-title { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+    .cv-title::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
+    .cv-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+    .cv-metric { padding: 18px 16px; border-radius: 13px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); }
+    .cv-n { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: var(--white); line-height: 1; letter-spacing: -0.03em; }
+    .cv-n span { color: var(--gold); }
+    .cv-l { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.35); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 8px; }
+    .cv-certs { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cv-cert { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: rgba(1,96,64,0.12); border: 1px solid rgba(1,96,64,0.22); font-size: 10px; font-weight: 700; color: #4ade80; font-family: 'DM Mono', monospace; }
+    .cv-contact { margin-top: 20px; padding: 18px 20px; border-radius: 14px; background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.06); }
+    .cv-row { display: flex; align-items: center; gap: 12px; font-size: 12.5px; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
+    .cv-row:last-child { margin-bottom: 0; }
+    .cv-row svg { flex-shrink: 0; color: var(--gold); }
+
+    /* ══════════════════════════════════════ INSTITUTIONS ══════════════════════════════════════ */
+    .inst-section { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.05); }
+    .inst-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    @media (max-width:900px) { .inst-cols { grid-template-columns: 1fr; gap: 48px; } }
+
+    .inst-group-label { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.3); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; }
+    .inst-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 24px; }
+    @media (max-width:480px) { .inst-grid { grid-template-columns: 1fr; } }
+    .inst-item { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.06); transition: background .2s, border-color .2s; }
+    .inst-item:hover { background: rgba(255,255,255,0.05); border-color: rgba(201,168,76,0.18); }
+    .inst-dot { width: 7px; height: 7px; border-radius: 50%; flex: 0 0 auto; background: #22c55e; box-shadow: 0 0 8px rgba(34,197,94,0.5); }
+    .inst-name { font-size: 11.5px; font-weight: 500; color: rgba(255,255,255,0.62); line-height: 1.35; }
+    .divider-soft { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent); margin: 20px 0; }
+
+    .inst-panel { background: rgba(9,14,26,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 40px 36px; position: relative; overflow: hidden; }
+    .inst-panel::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent); }
+
+    /* ══════════════════════════════════════ TEAM ══════════════════════════════════════ */
+    .team-section { background: linear-gradient(180deg, var(--ink) 0%, #07101a 50%, var(--ink) 100%); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 56px; }
+    @media (max-width:900px) { .team-grid { grid-template-columns: repeat(2,1fr); } }
+
+    .team-card { position: relative; overflow: hidden; border-radius: 20px; padding: 28px 22px 26px; background: rgba(9,14,26,0.75); border: 1px solid rgba(255,255,255,0.08); text-align: center; transition: transform .34s var(--ease), box-shadow .34s, border-color .34s; }
+    .team-card::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.45), transparent); opacity: 0; transition: opacity .34s; }
+    .team-card:hover { transform: translateY(-6px); box-shadow: 0 28px 70px rgba(0,0,0,0.55), 0 0 50px rgba(0,52,112,0.2); border-color: rgba(201,168,76,0.2); }
+    .team-card:hover::before { opacity: 1; }
+    .team-av { width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700; color: var(--gold-light); background: linear-gradient(135deg, var(--navy-3), var(--forest-2)); border: 2px solid rgba(201,168,76,0.25); box-shadow: 0 8px 28px rgba(0,0,0,0.45), 0 0 0 6px rgba(201,168,76,0.06); transition: box-shadow .34s; }
+    .team-card:hover .team-av { box-shadow: 0 12px 36px rgba(0,0,0,0.5), 0 0 0 8px rgba(201,168,76,0.1), 0 0 30px rgba(201,168,76,0.15); }
+    .team-name { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .team-role { font-size: 10px; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+    .team-dept { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.4); }
+
+    /* ══════════════════════════════════════ CTA ══════════════════════════════════════ */
+    .cta-section { background: var(--ink); padding-bottom: 120px; }
+    .cta-card { position: relative; overflow: hidden; border-radius: 28px; border: 1px solid rgba(255,255,255,0.10); padding: 80px 64px; text-align: center; background: linear-gradient(145deg, rgba(0,52,112,0.5), rgba(1,61,38,0.38) 50%, rgba(4,8,16,0.9)); }
+    .cta-card::before { content:''; position:absolute; top:-1px; left:10%; right:10%; height:1px; background:linear-gradient(90deg,transparent,rgba(201,168,76,0.55),transparent); }
+    .cta-orb { position:absolute; width:500px; height:500px; right:-150px; top:-150px; border-radius:50%; background:radial-gradient(circle,rgba(0,52,112,0.28),transparent 65%); filter:blur(60px); pointer-events:none; }
+    .cta-inner { position:relative; z-index:1; max-width:600px; margin:0 auto; }
+    .cta-h { font-family:'Cormorant Garamond',serif; font-size:clamp(30px,4vw,48px); font-weight:600; color:var(--white); letter-spacing:-0.02em; margin-bottom:14px; line-height:1.1; }
+    .cta-sub { font-size:15px; font-weight:300; line-height:1.75; color:rgba(255,255,255,0.48); margin-bottom:36px; }
+    .cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+    .cta-note { font-size:11px; font-weight:600; color:rgba(255,255,255,0.25); letter-spacing:0.09em; text-transform:uppercase; margin-top:20px; }
+    @media (max-width:768px) { .cta-card { padding: 48px 28px; } }
+
+    .footer { background: var(--ink-2, #090e1a); border-top: 1px solid rgba(255,255,255,0.06); padding: 40px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand" aria-label="Haq Enterprises Home">
+          <img src="assets/images/logo.png" alt="Haq Enterprises mark" width="44" height="44" loading="eager" style="border-radius:10px;">
+          <div>
+            <div class="nav-brand-name">Haq Enterprises</div>
+            <div class="nav-brand-sub">Medical · Pharmaceutical · General Supplies</div>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="suppliers.html">Suppliers</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+        </ul>
+        <a href="contact.html" class="nav-cta">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="2"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="2"/></svg>
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <a style="position:absolute;left:-9999px;" href="#main">Skip to content</a>
+  <main id="main">
+
+    <!-- HERO -->
+    <header class="page-hero" aria-label="About page header">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orb-a" aria-hidden="true"></div>
+      <div class="hero-orb-b" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-inner">
+          <div>
+            <div class="hero-eyebrow"><div class="eyebrow-dot"></div>Institutional Profile &amp; Company Overview</div>
+            <h1 class="hero-h1">Two decades of<br><em>trusted supply.</em></h1>
+            <p class="hero-sub">Established in <strong style="color:rgba(255,255,255,0.75);font-weight:600;">2004</strong>, Haq Enterprises is a documentation-led institutional supplier of medical, pharmaceutical, surgical, and general supplies — serving government and private institutions across Pakistan.</p>
+          </div>
+          <div style="animation: slideUp 0.9s var(--ease-out) 0.25s both;">
+            <a class="btn-primary" href="certificates.html">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" stroke="currentColor" stroke-width="2"/><rect x="9" y="3" width="6" height="4" rx="1" stroke="currentColor" stroke-width="2"/></svg>
+              Compliance Documents
+            </a>
+          </div>
+        </div>
+        <div class="hero-statbar" role="region" aria-label="Company statistics">
+          <div class="hstat"><div class="hstat-n"><span class="count-up" data-target="2004">0</span></div><div class="hstat-l">Year Founded</div></div>
+          <div class="hstat"><div class="hstat-n"><span class="count-up" data-target="20">0</span><span>+</span></div><div class="hstat-l">Years of Operations</div></div>
+          <div class="hstat"><div class="hstat-n"><span class="count-up" data-target="50">0</span><span>+</span></div><div class="hstat-l">Institutional Clients</div></div>
+          <div class="hstat"><div class="hstat-n"><span class="count-up" data-target="6">0</span></div><div class="hstat-l">Supply Categories</div></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- STORY -->
+    <section class="section story-section" aria-labelledby="story-h">
+      <div class="container">
+
+        <!-- Row 1 -->
+        <div class="story-cols" style="margin-bottom:80px;">
+          <div class="reveal">
+            <div class="story-visual">
+              <div class="sv-grid" aria-hidden="true"></div>
+              <div class="sv-orb" aria-hidden="true"></div>
+              <div class="sv-orb2" aria-hidden="true"></div>
+              <div class="sv-yr">EST. 2004 · KARACHI, PK</div>
+              <div class="sv-badge"><div class="sv-badge-dot"></div>Active &amp; Operating</div>
+              <div class="sv-h">A supplier built for institutional trust.</div>
+              <div class="sv-sub">Documentation-led operations since 2004 — serving public and private sector procurement environments across Pakistan.</div>
+              <div class="sv-stats">
+                <div class="svs"><div class="svs-n"><span class="count-up" data-target="20">0</span><span style="color:var(--gold)">+</span></div><div class="svs-l">Years</div></div>
+                <div class="svs"><div class="svs-n"><span class="count-up" data-target="9">0</span></div><div class="svs-l">Licenses</div></div>
+                <div class="svs"><div class="svs-n"><span class="count-up" data-target="2">0</span></div><div class="svs-l">ISO Certs</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal reveal-1">
+            <div class="s-label">Our Story</div>
+            <h2 class="s-title" id="story-h">Who we are</h2>
+            <p class="story-body">Haq Enterprises was founded with the objective of introducing and distributing advanced healthcare and allied products through a <strong>disciplined, documentation-led market approach</strong>. Over twenty years, we have evolved into a full-scope institutional supplier trusted by government hospitals, private clinics, laboratories, and NGOs across Karachi and Sindh.</p>
+            <p class="story-body">Our scope spans medicines, medical equipment, surgical instruments, hospital furniture, and general supply categories — all executed through verified procurement channels and supported by structured logistics and after-sales operations.</p>
+            <div class="story-attrs">
+              <div class="story-attr">
+                <div class="sa-ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg></div>
+                <div><div class="sa-h">Headquartered in Karachi</div><div class="sa-t">Bungalow # C-235, Block-02, P.E.C.H.S — our single operating base for all institutional supply operations.</div></div>
+              </div>
+              <div class="story-attr">
+                <div class="sa-ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z" stroke="currentColor" stroke-width="1.7"/></svg></div>
+                <div><div class="sa-h">Ethically oriented operations</div><div class="sa-t">Fair, ethical business practices aligned to responsible service execution and long-term institutional relationships.</div></div>
+              </div>
+              <div class="story-attr">
+                <div class="sa-ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+                <div><div class="sa-h">Structured documentation practice</div><div class="sa-t">Every order backed by batch records, quality declarations, certificates of origin, and regulatory compliance documentation.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 — reversed -->
+        <div class="story-cols rev">
+          <div class="reveal">
+            <div class="s-label">Our Journey</div>
+            <h2 class="s-title">Built over two decades</h2>
+            <p class="story-body">What began as a focused distribution effort has grown into a multi-category institutional supply operation — shaped by the needs of Pakistan's healthcare procurement landscape and the trust placed in us by public sector institutions across Sindh.</p>
+            <p class="story-body">Each milestone reflects an operational commitment: adding capability not to expand rapidly, but to serve institutional clients with greater depth and reliability at every stage.</p>
+            <div style="margin-top:28px;"><a class="btn-ghost" href="clients.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg>View Institutional Clients</a></div>
+          </div>
+
+          <div class="reveal reveal-1">
+            <div class="tl">
+              <div class="tl-item">
+                <div class="tl-dot">04</div>
+                <div><div class="tl-yr">2004</div><div class="tl-h">Haq Enterprises Founded</div><div class="tl-t">Established in Karachi to distribute advanced healthcare products through disciplined market channels.</div></div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot">10s</div>
+                <div><div class="tl-yr">Early Operations</div><div class="tl-h">Government hospital engagement</div><div class="tl-t">Established supply relationships with major Karachi public sector institutions including Civil Hospital and JPMC.</div></div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot">ISO</div>
+                <div><div class="tl-yr">Compliance Milestone</div><div class="tl-h">ISO 9001 &amp; ISO 13485 Certified</div><div class="tl-t">Achieved dual ISO certification for Quality Management and Medical Devices QMS — valid through June 2028.</div></div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot">NOW</div>
+                <div><div class="tl-yr">Present Day</div><div class="tl-h">Multi-category institutional supplier</div><div class="tl-t">Six supply categories, 9 active licenses, and 50+ institutional clients served across Karachi and Sindh.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="section mv-section" aria-labelledby="mv-h">
+      <div class="container">
+        <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto;">
+          <div class="s-label" style="justify-content:center;">Purpose &amp; Direction</div>
+          <h2 class="s-title" id="mv-h">Mission &amp; Vision</h2>
+          <p class="s-sub">Our institutional orientation is defined by procurement clarity, compliance discipline, and accountable service delivery.</p>
+        </div>
+        <div class="mv-grid">
+          <div class="mv-card mv-mission reveal">
+            <div class="mv-orb" aria-hidden="true"></div>
+            <div class="mv-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></div>
+            <div class="mv-tag">Mission</div>
+            <h3 class="mv-h">Our operating purpose</h3>
+            <p class="mv-body">Deliver reliable supply support to institutional buyers through clear documentation, controlled execution, and accountable service follow-through — ensuring every procurement cycle is predictable and verifiable.</p>
+            <div class="mv-pillars">
+              <div class="mv-pillar">Documentation-first execution</div>
+              <div class="mv-pillar">Predictable delivery cycles</div>
+              <div class="mv-pillar">Accountable post-delivery support</div>
+            </div>
+          </div>
+          <div class="mv-card mv-vision reveal reveal-1">
+            <div class="mv-orb" aria-hidden="true"></div>
+            <div class="mv-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/></svg></div>
+            <div class="mv-tag">Vision</div>
+            <h3 class="mv-h">Where we are headed</h3>
+            <p class="mv-body">Operate as a procurement-aligned supplier recognized for stability, compliance discipline, and service consistency — expanding institutional partnerships through operational trust, not marketing claims.</p>
+            <div class="mv-pillars">
+              <div class="mv-pillar">Recognized compliance stability</div>
+              <div class="mv-pillar">Expanded institutional reach across Sindh</div>
+              <div class="mv-pillar">Continuous quality improvement culture</div>
+            </div>
+          </div>
+          <div class="mv-quote reveal">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.22);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--gold);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="1.7"/></svg></div>
+            <div class="mv-q-text">"Strict focus on end-user satisfaction — supplying dependable medical products and surgical instruments that meet defined quality and compliance expectations."</div>
+            <div class="mv-q-attr">Quality Objective · Haq Enterprises Company Profile</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPERATING MODEL -->
+    <section class="section ops-section" aria-labelledby="ops-h">
+      <div class="container">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+          <div class="reveal">
+            <div class="s-label">Operating Model</div>
+            <h2 class="s-title" id="ops-h">Procurement-ready execution</h2>
+          </div>
+          <p class="s-sub reveal reveal-1" style="max-width:360px;margin-bottom:0;">Structured across three service functions — from logistics and order management to post-delivery accountability.</p>
+        </div>
+        <div class="ops-grid">
+          <article class="ops-card reveal" aria-labelledby="ops1">
+            <div class="ops-strip s-blue" aria-hidden="true"></div>
+            <div class="ops-num">01</div>
+            <div class="ops-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 7h13v10H3V7z" stroke="currentColor" stroke-width="1.7"/><path d="M16 10h3l2 2v5h-5v-7z" stroke="currentColor" stroke-width="1.7"/><circle cx="7" cy="19" r="1.5" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="19" r="1.5" stroke="currentColor" stroke-width="1.7"/></svg></div>
+            <h3 class="ops-h" id="ops1">Logistics &amp; Distribution</h3>
+            <div class="ops-sub">Availability when &amp; where needed</div>
+            <p class="ops-body">End-to-end supply chain from warehousing to final delivery — ensuring institutional procurement commitments are met on time and in full.</p>
+            <ul class="ops-bullets"><li>Warehousing &amp; stock management</li><li>Invoicing &amp; cash collection</li><li>Transportation &amp; delivery</li><li>Product packaging</li></ul>
+          </article>
+          <article class="ops-card reveal reveal-1" aria-labelledby="ops2">
+            <div class="ops-strip s-green" aria-hidden="true"></div>
+            <div class="ops-num">02</div>
+            <div class="ops-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 19V5h16v14H4z" stroke="currentColor" stroke-width="1.7"/><path d="M8 9h8M8 12h8M8 15h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+            <h3 class="ops-h" id="ops2">Sales Function</h3>
+            <div class="ops-sub">Process discipline &amp; order control</div>
+            <p class="ops-body">Structured order management and procurement documentation support — including technical proposals, quotations, and tender participation.</p>
+            <ul class="ops-bullets"><li>Order booking &amp; processing</li><li>Stock reporting &amp; planning</li><li>Quotation preparation</li><li>Tender documentation support</li></ul>
+          </article>
+          <article class="ops-card reveal reveal-2" aria-labelledby="ops3">
+            <div class="ops-strip s-gold" aria-hidden="true"></div>
+            <div class="ops-num">03</div>
+            <div class="ops-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2a6 6 0 0 0-6 6v3l-2 2v3h16v-3l-2-2V8a6 6 0 0 0-6-6z" stroke="currentColor" stroke-width="1.7"/><path d="M9 19a3 3 0 0 0 6 0" stroke="currentColor" stroke-width="1.7"/></svg></div>
+            <h3 class="ops-h" id="ops3">After-Sales Support</h3>
+            <div class="ops-sub">Accountability after delivery</div>
+            <p class="ops-body">Post-delivery support is a controlled service process — not informal follow-up. Complaints are documented and market feedback is systematically captured.</p>
+            <ul class="ops-bullets"><li>Customer service management</li><li>Complaint documentation &amp; resolution</li><li>Market feedback capture</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLIANCE -->
+    <section class="section comp-section" aria-labelledby="comp-h">
+      <div class="container">
+        <div class="comp-cols">
+          <div class="reveal">
+            <div class="s-label">Compliance &amp; Verification</div>
+            <h2 class="s-title" id="comp-h">Documented, licensed &amp; verified</h2>
+            <p class="s-sub" style="margin-bottom:32px;">All credentials are maintained for institutional due diligence and vendor verification by procurement offices.</p>
+            <ul class="comp-list" aria-label="Compliance credentials">
+              <li class="cl-item"><div class="cl-chk" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div><div><div class="cl-name">ISO 9001:2015 — Quality Management System</div><div class="cl-det">Valid through 16-Jun-2028 · Full QMS scope</div></div></li>
+              <li class="cl-item"><div class="cl-chk" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div><div><div class="cl-name">ISO 13485:2016 — Medical Devices QMS</div><div class="cl-det">Valid through 16-Jun-2028 · Devices scope</div></div></li>
+              <li class="cl-item"><div class="cl-chk" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div><div><div class="cl-name">Drug Wholesale License</div><div class="cl-det">08-Feb-2023 → 07-Feb-2028 · Licensed wholesale scope</div></div></li>
+              <li class="cl-item"><div class="cl-chk" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div><div><div class="cl-name">Sindh Food Authority License</div><div class="cl-det">16-Oct-2025 → 15-Oct-2026 · SFA food supply scope</div></div></li>
+              <li class="cl-item"><div class="cl-chk" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div><div><div class="cl-name">KCCI Membership · FBR / NTN Registration</div><div class="cl-det">Chamber of Commerce + Federal Tax Registration</div></div></li>
+              <li class="cl-item"><div class="cl-chk" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div><div><div class="cl-name">Trademark · IPO Pakistan · PEC License</div><div class="cl-det">Registered trademark + Pakistan Engineering Council</div></div></li>
+            </ul>
+          </div>
+
+          <div class="reveal reveal-1">
+            <div class="comp-vis">
+              <div class="cv-orb" aria-hidden="true"></div>
+              <div class="cv-title">Compliance at a glance</div>
+              <div class="cv-metrics">
+                <div class="cv-metric"><div class="cv-n"><span class="count-up" data-target="2">0</span></div><div class="cv-l">ISO Certifications</div></div>
+                <div class="cv-metric"><div class="cv-n"><span class="count-up" data-target="9">0</span></div><div class="cv-l">Active Credentials</div></div>
+                <div class="cv-metric"><div class="cv-n"><span class="count-up" data-target="20">0</span><span style="color:var(--gold)">+</span></div><div class="cv-l">Years Operating</div></div>
+                <div class="cv-metric"><div class="cv-n"><span class="count-up" data-target="2028">0</span></div><div class="cv-l">ISO Valid Until</div></div>
+              </div>
+              <div class="cv-certs">
+                <span class="cv-cert"><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>ISO 9001:2015</span>
+                <span class="cv-cert"><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>ISO 13485:2016</span>
+                <span class="cv-cert"><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>Drug License</span>
+                <span class="cv-cert"><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>SFA License</span>
+                <span class="cv-cert"><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>NTN / FBR</span>
+                <span class="cv-cert"><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>PEC</span>
+              </div>
+              <div class="cv-contact">
+                <div class="cv-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="1.7"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="1.7"/></svg>haqwithsmile@gmail.com</div>
+                <div class="cv-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.68 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l1.09-1.08a2 2 0 0 1 2.11-.45c.91.33 1.85.55 2.81.68a2 2 0 0 1 1.72 2.03z" stroke="currentColor" stroke-width="1.7"/></svg>0311-1076235 · 0314-2170043</div>
+                <div class="cv-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg>Bungalow # C-235, Block-02, P.E.C.H.S, Karachi</div>
+              </div>
+              <div style="margin-top:16px;">
+                <a class="btn-primary" href="certificates.html" style="width:100%;justify-content:center;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" stroke="currentColor" stroke-width="2"/><rect x="9" y="3" width="6" height="4" rx="1" stroke="currentColor" stroke-width="2"/></svg>
+                  View All Certificates
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTITUTIONS -->
+    <section class="section inst-section" aria-labelledby="inst-h">
+      <div class="container">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:52px;">
+          <div class="reveal">
+            <div class="s-label">Institutional Footprint</div>
+            <h2 class="s-title" id="inst-h">Government &amp; institutional clients</h2>
+          </div>
+          <a class="btn-ghost reveal reveal-1" href="clients.html">View Full Clients List</a>
+        </div>
+        <div class="inst-cols">
+          <div class="reveal">
+            <div class="inst-group-label">Karachi</div>
+            <div class="inst-grid">
+              <div class="inst-item"><div class="inst-dot"></div><div class="inst-name">Civil Hospital (Dr. Ruth K.M. Pfau)</div></div>
+              <div class="inst-item"><div class="inst-dot"></div><div class="inst-name">Jinnah Postgraduate Medical Center</div></div>
+              <div class="inst-item"><div class="inst-dot"></div><div class="inst-name">National Institute of Child Health</div></div>
+              <div class="inst-item"><div class="inst-dot"></div><div class="inst-name">SICHN Karachi</div></div>
+              <div class="inst-item"><div class="inst-dot"></div><div class="inst-name">PM&amp;I Cell, Govt. of Sindh</div></div>
+              <div class="inst-item"><div class="inst-dot"></div><div class="inst-name">SEESI Karachi</div></div>
+            </div>
+            <div class="divider-soft"></div>
+            <div class="inst-group-label">Sindh</div>
+            <div class="inst-grid">
+              <div class="inst-item"><div class="inst-dot"></div><div class="inst-name">Liaquat University Hospital</div></div>
+              <div class="inst-item"><div class="inst-dot"></div><div class="inst-name">Chandka Medical College Hospital</div></div>
+              <div class="inst-item"><div class="inst-dot"></div><div class="inst-name">GM Mahar Medical College (Sukkur)</div></div>
+              <div class="inst-item"><div class="inst-dot"></div><div class="inst-name">Peoples Medical College (Nawabshah)</div></div>
+              <div class="inst-item"><div class="inst-dot"></div><div class="inst-name">DHO — All Sindh</div></div>
+              <div class="inst-item"><div class="inst-dot"></div><div class="inst-name">Taluka Hospitals — All Sindh</div></div>
+            </div>
+          </div>
+          <div class="reveal reveal-1">
+            <div class="inst-panel">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;color:rgba(255,255,255,0.5);margin-bottom:24px;display:flex;align-items:center;gap:10px;">Institutional scope <span style="flex:1;height:1px;background:rgba(255,255,255,0.08);display:block;"></span></div>
+              <p style="font-size:14px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.48);margin-bottom:20px;">Our service footprint covers government hospitals, health departments, district health offices, and taluka hospitals across Karachi and all of Sindh — alongside private institutions, clinics, laboratories, NGOs, and corporate medical buyers.</p>
+              <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+                <div style="display:flex;align-items:center;gap:12px;font-size:13px;color:rgba(255,255,255,0.55);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="color:var(--gold);flex-shrink:0;"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>Government hospitals &amp; health departments</div>
+                <div style="display:flex;align-items:center;gap:12px;font-size:13px;color:rgba(255,255,255,0.55);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="color:var(--gold);flex-shrink:0;"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>Private hospitals, clinics &amp; laboratories</div>
+                <div style="display:flex;align-items:center;gap:12px;font-size:13px;color:rgba(255,255,255,0.55);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="color:var(--gold);flex-shrink:0;"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>NGOs, corporates &amp; institutions</div>
+              </div>
+              <a class="btn-primary" href="clients.html" style="width:100%;justify-content:center;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg>
+                Full Clients Page
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section team-section" aria-labelledby="team-h">
+      <div class="container">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+          <div class="reveal">
+            <div class="s-label">Our People</div>
+            <h2 class="s-title" id="team-h">The team behind the operations</h2>
+          </div>
+          <a class="btn-ghost reveal reveal-1" href="team.html">Full Team Page</a>
+        </div>
+        <div class="team-grid">
+          <div class="team-card reveal"><div class="team-av">DM</div><div class="team-name">Depot Manager</div><div class="team-role">Operations Lead</div><div class="team-dept">Depot &amp; Logistics</div></div>
+          <div class="team-card reveal reveal-1"><div class="team-av">RA</div><div class="team-name">RAO</div><div class="team-role">Regional Accounts</div><div class="team-dept">Sales</div></div>
+          <div class="team-card reveal reveal-2"><div class="team-av">WI</div><div class="team-name">Warehouse Incharge</div><div class="team-role">Stock Management</div><div class="team-dept">Warehouse</div></div>
+          <div class="team-card reveal reveal-3"><div class="team-av">FI</div><div class="team-name">Finance</div><div class="team-role">Financial Operations</div><div class="team-dept">Finance &amp; IT</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section" aria-labelledby="cta-h">
+      <div class="container">
+        <div class="cta-card reveal">
+          <div class="cta-orb" aria-hidden="true"></div>
+          <div class="cta-inner">
+            <div class="s-label" style="justify-content:center;">Procurement Inquiry</div>
+            <h2 class="cta-h" id="cta-h">Government &amp; Private Institutions are welcome</h2>
+            <p class="cta-sub">Hospitals, clinics, laboratories, NGOs, corporates and institutions can contact us for supply inquiries — backed by our verified, documented operations and ISO-certified quality management system.</p>
+            <div class="cta-btns">
+              <a class="btn-primary" href="contact.html">Private Institutions — Contact Us</a>
+              <a class="btn-ghost" href="contact.html">Corporate Medical Supply Inquiries</a>
+            </div>
+            <div class="cta-note">Verified · Documented · Trusted since 2004</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">© 2025 Haq Enterprises. All rights reserved.</div>
+        <div class="footer-copy">Built for trust, compliance, and enterprise procurement.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    "use strict";
+    var revealEls = Array.from(document.querySelectorAll(".reveal"));
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
+      }, { threshold: 0.07, rootMargin: "0px 0px -28px 0px" });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else { revealEls.forEach(function (el) { el.classList.add("visible"); }); }
+
+    var counters = Array.from(document.querySelectorAll(".count-up"));
+    function animateCounter(el) {
+      var target = parseInt(el.getAttribute("data-target"), 10);
+      var dur = 1600; var start = performance.now();
+      (function tick(now) {
+        var p = Math.min((now - start) / dur, 1);
+        var ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(ease * target);
+        if (p < 1) requestAnimationFrame(tick); else el.textContent = target;
+      })(start);
+    }
+    if ("IntersectionObserver" in window) {
+      var cio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { animateCounter(e.target); cio.unobserve(e.target); } });
+      }, { threshold: 0.4 });
+      counters.forEach(function (c) { cio.observe(c); });
+    } else { counters.forEach(function (c) { c.textContent = c.getAttribute("data-target"); }); }
+  })();
+  </script>
+
+</body>
+</html>

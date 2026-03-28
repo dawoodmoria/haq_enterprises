@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#001122" name="theme-color"/>
+  <title>Haq Enterprises — Clients &amp; Partners</title>
+  <meta content="Trusted by 50+ government hospitals, NGOs, and institutional procurement bodies across Sindh." name="description"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    /* ═══════════════════════════════════════════════════
+       DESIGN SYSTEM — Haq Enterprises Client Portal
+       Refined Institutional Luxury | 2025
+    ═══════════════════════════════════════════════════ */
+    :root {
+      --ink:       #05080f;
+      --ink-2:     #0e1520;
+      --ink-3:     #1a2540;
+
+      --navy:      #001F3F;
+      --navy-2:    #002a56;
+      --navy-3:    #00346b;
+
+      --forest:    #013220;
+      --forest-2:  #014a2e;
+      --forest-3:  #016840;
+
+      --platinum:  #e8ecf0;
+      --platinum-2:#d4dae2;
+      --platinum-3:#bfc8d4;
+
+      --gold:      #c9a84c;
+      --gold-2:    #b8932e;
+      --gold-light:#f0dfa0;
+
+      --white:     #ffffff;
+      --off-white: #f8fafb;
+
+      --glass:     rgba(255,255,255,0.055);
+      --glass-2:   rgba(255,255,255,0.09);
+      --glass-border: rgba(255,255,255,0.12);
+      --glass-border-2: rgba(255,255,255,0.18);
+
+      --shadow-deep: 0 32px 80px rgba(0,0,0,0.6), 0 8px 24px rgba(0,0,0,0.4);
+      --shadow-card: 0 24px 60px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3);
+      --shadow-lift: 0 40px 100px rgba(0,0,0,0.7), 0 8px 32px rgba(0,0,0,0.4);
+      --shadow-glow-navy: 0 0 60px rgba(0,52,107,0.5);
+      --shadow-glow-forest: 0 0 60px rgba(1,104,64,0.4);
+      --shadow-glow-gold: 0 0 40px rgba(201,168,76,0.3);
+
+      --r-sm: 10px;
+      --r-md: 16px;
+      --r-lg: 24px;
+      --r-xl: 32px;
+
+      --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--ink);
+      color: var(--platinum);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--ink-2); }
+    ::-webkit-scrollbar-thumb { background: var(--navy-3); border-radius: 3px; }
+
+    /* ── SELECTION ── */
+    ::selection { background: rgba(201,168,76,0.3); color: var(--white); }
+
+    /* ═══════════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════════ */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px;
+      height: 72px;
+      background: rgba(5, 8, 15, 0.85);
+      backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .nav-brand {
+      display: flex; align-items: center; gap: 14px;
+      text-decoration: none;
+    }
+    .nav-brand-mark {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--navy-3), var(--forest-2));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 900; font-size: 20px;
+      color: var(--gold-light);
+      border: 1px solid rgba(201,168,76,0.3);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .nav-brand-text { display: flex; flex-direction: column; }
+    .nav-brand-name {
+      font-weight: 700; font-size: 15px; color: var(--white);
+      letter-spacing: -0.01em; line-height: 1;
+    }
+    .nav-brand-sub {
+      font-size: 10px; font-weight: 500;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.06em; text-transform: uppercase; margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 4px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none; color: rgba(255,255,255,0.6);
+      font-size: 13px; font-weight: 500;
+      padding: 8px 14px; border-radius: 8px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); background: var(--glass); }
+    .nav-links a.active { color: var(--white); background: var(--glass-2); }
+
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--forest-2), var(--navy-2));
+      color: var(--white); text-decoration: none;
+      font-size: 13px; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      transition: transform 0.2s var(--ease-smooth), box-shadow 0.2s;
+    }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+
+    @media (max-width: 900px) {
+      .nav { padding: 0 20px; }
+      .nav-links { display: none; }
+    }
+
+    /* ═══════════════════════════════════════════
+       HERO — TRUST PAGE HEADER
+    ═══════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: 140px 40px 80px;
+      overflow: hidden;
+    }
+
+    /* Layered atmospheric background */
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(0,52,107,0.7), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 10% 80%, rgba(1,74,46,0.5), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 90% 70%, rgba(0,31,63,0.6), transparent 55%),
+        linear-gradient(180deg, #080e1c 0%, #05080f 50%, #06100e 100%);
+    }
+
+    /* Subtle grid texture */
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+    }
+
+    /* Floating orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    .orb-1 {
+      width: 600px; height: 600px;
+      top: -200px; left: -100px;
+      background: radial-gradient(circle, rgba(0,52,107,0.4), transparent 70%);
+      animation: orbDrift 20s ease-in-out infinite alternate;
+    }
+    .orb-2 {
+      width: 500px; height: 500px;
+      bottom: -100px; right: -100px;
+      background: radial-gradient(circle, rgba(1,74,46,0.35), transparent 70%);
+      animation: orbDrift 26s ease-in-out infinite alternate-reverse;
+    }
+    .orb-3 {
+      width: 300px; height: 300px;
+      top: 40%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(201,168,76,0.08), transparent 70%);
+      animation: orbPulse 8s ease-in-out infinite;
+    }
+    @keyframes orbDrift { from { transform: translate(0,0); } to { transform: translate(40px, 30px); } }
+    @keyframes orbPulse { 0%,100% { opacity: 0.5; transform: translate(-50%,-50%) scale(1); } 50% { opacity: 1; transform: translate(-50%,-50%) scale(1.15); } }
+
+    /* Floating cross markers (medical) */
+    .med-float {
+      position: absolute;
+      width: 24px; height: 24px;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+    .med-float::before, .med-float::after {
+      content: '';
+      position: absolute;
+      background: var(--platinum);
+      border-radius: 2px;
+    }
+    .med-float::before { width: 100%; height: 33%; top: 33%; left: 0; }
+    .med-float::after { width: 33%; height: 100%; top: 0; left: 33%; }
+    .med-float:nth-child(1) { top: 20%; left: 8%; transform: rotate(15deg); animation: floatSlow 12s ease-in-out infinite; }
+    .med-float:nth-child(2) { top: 70%; left: 5%; transform: rotate(-10deg); width:16px; height:16px; animation: floatSlow 16s ease-in-out infinite 3s; }
+    .med-float:nth-child(3) { top: 15%; right: 10%; transform: rotate(8deg); width:18px; height:18px; animation: floatSlow 14s ease-in-out infinite 1s; }
+    .med-float:nth-child(4) { top: 75%; right: 7%; transform: rotate(-20deg); animation: floatSlow 18s ease-in-out infinite 5s; }
+    .med-float:nth-child(5) { top: 45%; left: 3%; width:12px; height:12px; animation: floatSlow 10s ease-in-out infinite 2s; }
+    @keyframes floatSlow { 0%,100% { transform: translateY(0) rotate(15deg); } 50% { transform: translateY(-14px) rotate(15deg); } }
+
+    .hero-content { position: relative; z-index: 2; max-width: 900px; }
+
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 8px 18px; border-radius: 999px;
+      border: 1px solid rgba(201,168,76,0.3);
+      background: rgba(201,168,76,0.08);
+      font-size: 11px; font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 28px;
+      animation: fadeUp 0.8s var(--ease-smooth) both;
+    }
+    .eyebrow-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 8px var(--gold);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(44px, 7vw, 88px);
+      font-weight: 700;
+      line-height: 1.03;
+      letter-spacing: -0.025em;
+      color: var(--white);
+      margin-bottom: 24px;
+      animation: fadeUp 0.8s var(--ease-smooth) 0.1s both;
+    }
+    .hero-title em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), #e8c06a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(15px, 2vw, 18px);
+      font-weight: 400; line-height: 1.7;
+      color: rgba(255,255,255,0.55);
+      max-width: 600px;
+      margin: 0 auto 48px;
+      animation: fadeUp 0.8s var(--ease-smooth) 0.2s both;
+    }
+
+    .hero-actions {
+      display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;
+      animation: fadeUp 0.8s var(--ease-smooth) 0.3s both;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px; border-radius: var(--r-md);
+      background: linear-gradient(135deg, var(--forest-2) 0%, var(--navy-2) 100%);
+      color: var(--white); text-decoration: none;
+      font-size: 14px; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+      transition: transform 0.25s var(--ease-smooth), box-shadow 0.25s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 48px rgba(0,0,0,0.5), var(--shadow-glow-forest); }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px; border-radius: var(--r-md);
+      background: var(--glass); border: 1px solid var(--glass-border);
+      color: rgba(255,255,255,0.75); text-decoration: none;
+      font-size: 14px; font-weight: 600;
+      transition: color 0.2s, background 0.2s, transform 0.2s;
+    }
+    .btn-ghost:hover { color: var(--white); background: var(--glass-2); transform: translateY(-2px); }
+
+    /* Stats strip in hero */
+    .hero-stats {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0; flex-wrap: wrap;
+      margin-top: 72px;
+      border: 1px solid var(--glass-border);
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(12px);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      animation: fadeUp 0.8s var(--ease-smooth) 0.4s both;
+    }
+    .hero-stat {
+      flex: 1; min-width: 160px;
+      padding: 28px 32px;
+      border-right: 1px solid var(--glass-border);
+      text-align: center;
+    }
+    .hero-stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px; font-weight: 700;
+      color: var(--white); line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .stat-num span { color: var(--gold); }
+    .stat-label {
+      font-size: 11px; font-weight: 600;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Scroll indicator */
+    .scroll-cue {
+      position: absolute; bottom: 40px; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.25); font-size: 10px; letter-spacing: 0.15em;
+      text-transform: uppercase; font-weight: 600;
+      animation: fadeUp 1s ease 1s both;
+    }
+    .scroll-line {
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+    @keyframes scrollLine { 0%,100% { transform: scaleY(1); opacity: 0.4; } 50% { transform: scaleY(0.5); opacity: 1; } }
+
+    /* ═══════════════════════════════════════════
+       SECTION WRAPPER
+    ═══════════════════════════════════════════ */
+    .section {
+      padding: 100px 40px;
+      position: relative;
+    }
+    .section-sm { padding: 60px 40px; }
+    .container { max-width: 1280px; margin: 0 auto; }
+    .container-sm { max-width: 960px; margin: 0 auto; }
+
+    .section-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 10px; font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.16em; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .section-label::before {
+      content: '';
+      width: 24px; height: 1px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 700; line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 16px; font-weight: 400; line-height: 1.7;
+      color: rgba(255,255,255,0.45);
+      max-width: 520px;
+    }
+
+    /* ═══════════════════════════════════════════
+       TRUST METRICS
+    ═══════════════════════════════════════════ */
+    .metrics-section {
+      background: linear-gradient(180deg, var(--ink) 0%, #080e1c 50%, var(--ink) 100%);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+    }
+
+    .metric-card {
+      padding: 48px 36px;
+      background: rgba(5,8,15,0.8);
+      position: relative;
+      transition: background 0.3s;
+    }
+    .metric-card:hover { background: rgba(10,16,30,0.9); }
+    .metric-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 36px; right: 36px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .metric-card:hover::after { opacity: 1; }
+
+    .metric-icon {
+      width: 48px; height: 48px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      margin-bottom: 24px;
+      color: var(--gold-light);
+    }
+
+    .metric-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px; font-weight: 700;
+      line-height: 1; letter-spacing: -0.03em;
+      color: var(--white);
+    }
+    .metric-num sup { font-size: 28px; color: var(--gold); }
+    .metric-num span.plus { color: var(--gold); }
+
+    .metric-label {
+      font-size: 13px; font-weight: 600;
+      color: rgba(255,255,255,0.55);
+      margin-top: 10px; text-transform: uppercase; letter-spacing: 0.08em;
+    }
+
+    .metric-desc {
+      font-size: 13px; font-weight: 400; line-height: 1.6;
+      color: rgba(255,255,255,0.3);
+      margin-top: 8px;
+    }
+
+    /* ═══════════════════════════════════════════
+       TOOLBAR (SEARCH + FILTER)
+    ═══════════════════════════════════════════ */
+    .toolbar-section {
+      background: var(--ink);
+      padding: 0 40px 60px;
+    }
+
+    .toolbar {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-lg);
+      backdrop-filter: blur(12px);
+    }
+
+    .search-wrap {
+      position: relative; flex: 1; min-width: 240px;
+    }
+    .search-icon {
+      position: absolute; left: 16px; top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255,255,255,0.3); pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      padding: 12px 44px 12px 48px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--r-sm);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px; font-weight: 500;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+    }
+    .search-input::placeholder { color: rgba(255,255,255,0.3); }
+    .search-input:focus {
+      border-color: rgba(201,168,76,0.4);
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+    }
+    .search-clear {
+      position: absolute; right: 10px; top: 50%;
+      transform: translateY(-50%);
+      width: 32px; height: 32px; border-radius: 8px;
+      background: transparent; border: none;
+      color: rgba(255,255,255,0.4); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: color 0.2s, background 0.2s;
+    }
+    .search-clear:hover { color: var(--white); background: var(--glass); }
+
+    .filter-group {
+      display: flex; align-items: center; gap: 6px;
+    }
+    .filter-btn {
+      padding: 10px 16px;
+      border-radius: var(--r-sm);
+      border: 1px solid rgba(255,255,255,0.1);
+      background: transparent;
+      color: rgba(255,255,255,0.55);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px; font-weight: 600;
+      cursor: pointer; white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover { color: var(--white); border-color: rgba(255,255,255,0.2); background: var(--glass); }
+    .filter-btn[aria-pressed="true"] {
+      color: var(--white);
+      background: linear-gradient(135deg, rgba(0,52,107,0.6), rgba(1,74,46,0.5));
+      border-color: rgba(201,168,76,0.35);
+      box-shadow: 0 0 20px rgba(201,168,76,0.1);
+    }
+
+    .count-chips { display: flex; gap: 8px; }
+    .count-chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 14px; border-radius: 999px;
+      background: var(--glass); border: 1px solid var(--glass-border);
+      font-size: 12px; font-weight: 700;
+      color: rgba(255,255,255,0.6); white-space: nowrap;
+    }
+    .chip-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+    }
+    .chip-dot.green { background: #16a34a; box-shadow: 0 0 6px rgba(22,163,74,0.5); }
+    .chip-dot.navy { background: #3b82f6; box-shadow: 0 0 6px rgba(59,130,246,0.4); }
+
+    /* ═══════════════════════════════════════════
+       CLIENT CARDS — MAIN SHOWCASE
+    ═══════════════════════════════════════════ */
+    .clients-section { background: var(--ink); padding: 0 40px 100px; }
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+      gap: 24px;
+    }
+
+    @media (max-width: 700px) {
+      .clients-grid { grid-template-columns: 1fr; }
+    }
+
+    .client-card {
+      background: rgba(10,16,28,0.7);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      backdrop-filter: blur(20px);
+      transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s, border-color 0.35s;
+      position: relative;
+    }
+    .client-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent 10%, rgba(201,168,76,0.5) 50%, transparent 90%);
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    .client-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lift), 0 0 80px rgba(0,52,107,0.3);
+      border-color: rgba(201,168,76,0.2);
+    }
+    .client-card:hover::before { opacity: 1; }
+
+    /* Light sweep effect */
+    .client-card::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.02) 50%, transparent 60%);
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .client-card:hover::after { opacity: 1; }
+
+    .card-header {
+      padding: 28px 28px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: linear-gradient(135deg,
+        rgba(0,52,107,0.15) 0%,
+        rgba(1,74,46,0.08) 50%,
+        transparent 100%
+      );
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+    }
+
+    .card-header-left { flex: 1; }
+
+    .card-icon-row {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 14px;
+    }
+    .card-icon {
+      width: 48px; height: 48px; border-radius: 14px; flex: 0 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(0,52,107,0.5), rgba(1,74,46,0.4));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      color: var(--gold-light);
+    }
+    .card-region-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 12px; border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      font-size: 11px; font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.07em; text-transform: uppercase;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700;
+      color: var(--white); letter-spacing: -0.01em;
+      line-height: 1.15; margin-bottom: 8px;
+    }
+    .card-desc {
+      font-size: 13px; font-weight: 400; line-height: 1.6;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .card-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 7px 14px; border-radius: 999px; white-space: nowrap;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .badge-active {
+      background: rgba(22,163,74,0.15);
+      border: 1px solid rgba(22,163,74,0.3);
+      color: #4ade80;
+    }
+    .badge-ongoing {
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.25);
+      color: #93c5fd;
+    }
+    .badge-count {
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.25);
+      color: var(--gold-light);
+    }
+    .badge-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+    }
+    .badge-active .badge-dot { background: #4ade80; box-shadow: 0 0 6px #4ade80; }
+    .badge-ongoing .badge-dot { background: #93c5fd; box-shadow: 0 0 6px rgba(147,197,253,0.5); }
+    .badge-count .badge-dot { background: var(--gold); box-shadow: 0 0 6px var(--gold); }
+
+    .card-body { padding: 0; }
+
+    /* ── Individual institution rows ── */
+    .inst-list {
+      list-style: none;
+    }
+
+    .inst-item {
+      display: flex; align-items: center; gap: 16px;
+      padding: 14px 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      position: relative;
+      transition: background 0.2s;
+      cursor: default;
+    }
+    .inst-item:last-child { border-bottom: none; }
+    .inst-item:hover { background: rgba(255,255,255,0.03); }
+    .inst-item:hover .inst-marker { opacity: 1; transform: scale(1.1); }
+
+    .inst-marker {
+      width: 8px; height: 8px; border-radius: 50%; flex: 0 0 auto;
+      background: var(--forest-3);
+      box-shadow: 0 0 8px rgba(1,104,64,0.5);
+      opacity: 0.55;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .inst-marker.navy { background: var(--navy-3); box-shadow: 0 0 8px rgba(0,52,107,0.5); }
+
+    .inst-name {
+      flex: 1;
+      font-size: 13.5px; font-weight: 500; line-height: 1.4;
+      color: rgba(255,255,255,0.78);
+      transition: color 0.2s;
+    }
+    .inst-item:hover .inst-name { color: rgba(255,255,255,0.95); }
+
+    .inst-type {
+      font-size: 10px; font-weight: 700;
+      color: rgba(255,255,255,0.28);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    mark.hx-mark {
+      background: rgba(201,168,76,0.2);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 4px; padding: 0 3px;
+      color: var(--gold-light); font-weight: 700;
+    }
+
+    /* ── Empty state ── */
+    .empty-state {
+      display: none;
+      text-align: center; padding: 80px 40px;
+      border: 1px dashed rgba(255,255,255,0.1);
+      border-radius: var(--r-xl);
+      background: rgba(255,255,255,0.02);
+    }
+    .empty-state.visible { display: block; }
+    .empty-state h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--white); margin-bottom: 12px; }
+    .empty-state p { font-size: 14px; color: rgba(255,255,255,0.4); }
+
+    /* ── Column hide ── */
+    [data-group][hidden] { display: none !important; }
+
+    /* ═══════════════════════════════════════════
+       LOGO WALL (SECONDARY)
+    ═══════════════════════════════════════════ */
+    .logos-section {
+      background: linear-gradient(180deg, var(--ink) 0%, #070c18 50%, var(--ink) 100%);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .logos-intro {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 24px; flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+
+    .logo-wall {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+
+    .logo-cell {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px;
+      padding: 32px 20px;
+      background: rgba(5,8,15,0.8);
+      border: none; cursor: default;
+      text-align: center;
+      transition: background 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .logo-cell:hover { background: rgba(15,24,40,0.9); }
+
+    .logo-cell::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(0,52,107,0.15), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .logo-cell:hover::before { opacity: 1; }
+
+    .logo-abbr {
+      font-family: 'DM Mono', monospace;
+      font-size: 18px; font-weight: 500;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.05em;
+      transition: color 0.3s;
+    }
+    .logo-cell:hover .logo-abbr { color: var(--gold-light); }
+
+    .logo-name {
+      font-size: 11px; font-weight: 600;
+      color: rgba(255,255,255,0.25);
+      line-height: 1.4; text-align: center;
+      transition: color 0.3s;
+    }
+    .logo-cell:hover .logo-name { color: rgba(255,255,255,0.65); }
+
+    /* ═══════════════════════════════════════════
+       TRUST BLOCK / CTA
+    ═══════════════════════════════════════════ */
+    .trust-section { background: var(--ink); }
+
+    .trust-card {
+      position: relative; overflow: hidden;
+      border-radius: var(--r-xl);
+      border: 1px solid rgba(255,255,255,0.1);
+      background: linear-gradient(135deg,
+        rgba(0,52,107,0.5) 0%,
+        rgba(1,74,46,0.35) 50%,
+        rgba(5,8,15,0.9) 100%
+      );
+      padding: 72px 60px;
+    }
+    .trust-card::before {
+      content: '';
+      position: absolute; top: -1px; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent);
+    }
+    .trust-bg-orb {
+      position: absolute;
+      width: 600px; height: 600px;
+      right: -200px; top: -200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,52,107,0.25), transparent 65%);
+      filter: blur(60px); pointer-events: none;
+    }
+
+    .trust-inner {
+      position: relative; z-index: 1;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 48px; flex-wrap: wrap;
+    }
+    .trust-text { flex: 1; min-width: 280px; }
+    .trust-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 700; line-height: 1.1;
+      color: var(--white); letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .trust-sub {
+      font-size: 15px; font-weight: 400; line-height: 1.7;
+      color: rgba(255,255,255,0.5);
+      max-width: 480px;
+    }
+    .trust-actions { display: flex; flex-direction: column; gap: 12px; }
+    .trust-actions .btn-primary { padding: 16px 32px; font-size: 15px; }
+    .trust-note {
+      font-size: 11px; font-weight: 600;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      text-align: center;
+    }
+
+    /* ═══════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════ */
+    .footer {
+      background: var(--ink-2);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 40px;
+    }
+    .footer-inner {
+      max-width: 1280px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-note { font-size: 13px; color: rgba(255,255,255,0.3); font-weight: 400; }
+
+    /* ═══════════════════════════════════════════
+       SCROLL REVEAL
+    ═══════════════════════════════════════════ */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s var(--ease-smooth), transform 0.7s var(--ease-smooth);
+    }
+    .reveal.in-view { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ═══════════════════════════════════════════
+       COUNTER ANIMATION
+    ═══════════════════════════════════════════ */
+    .count-up { display: inline; }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .section, .clients-section, .toolbar-section { padding-left: 20px; padding-right: 20px; }
+      .section { padding-top: 72px; padding-bottom: 72px; }
+      .hero { padding: 120px 20px 60px; }
+      .hero-stats { flex-direction: column; gap: 0; }
+      .hero-stat { border-right: none; border-bottom: 1px solid var(--glass-border); }
+      .hero-stat:last-child { border-bottom: none; }
+      .trust-card { padding: 48px 28px; }
+      .footer { padding: 24px 20px; }
+      .metric-card { padding: 32px 24px; }
+      .card-header { padding: 20px 20px 16px; }
+      .inst-item { padding: 12px 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════ NAVIGATION ═══════ -->
+  <nav class="nav" aria-label="Main navigation">
+    <a class="nav-brand" href="index.html" aria-label="Haq Enterprises Home">
+      <img src="assets/images/logo.png" alt="Haq Enterprises mark" width="44" height="44" loading="eager" style="border-radius:10px;">
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">Haq Enterprises</span>
+        <span class="nav-brand-sub">Medical · Pharmaceutical · General Supplies</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="clients.html" class="active">Clients</a></li>
+      <li><a href="suppliers.html">Suppliers</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="2"/>
+        <path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      Contact Us
+    </a>
+  </nav>
+
+  <main id="main">
+
+    <!-- ═══════ HERO ═══════ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+      <div class="orb orb-3" aria-hidden="true"></div>
+      <div class="med-float" aria-hidden="true"></div>
+      <div class="med-float" aria-hidden="true"></div>
+      <div class="med-float" aria-hidden="true"></div>
+      <div class="med-float" aria-hidden="true"></div>
+      <div class="med-float" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <div class="eyebrow-dot"></div>
+          Institutional Client Portfolio
+        </div>
+        <h1 class="hero-title" id="hero-heading">
+          Trusted by Pakistan's<br><em>leading institutions</em>
+        </h1>
+        <p class="hero-subtitle">
+          Over two decades of structured supply relationships with government hospitals, provincial health departments, and institutional procurement bodies across Sindh.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="contact.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="2"/>
+              <path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            Submit Supply Inquiry
+          </a>
+          <a class="btn-ghost" href="#client-list">
+            Browse Client List
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-stats" role="region" aria-label="Partnership summary">
+          <div class="hero-stat">
+            <div class="stat-num"><span class="count-up" data-target="50">0</span><span>+</span></div>
+            <div class="stat-label">Institutional Clients</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-num"><span class="count-up" data-target="37">0</span><span>+</span></div>
+            <div class="stat-label">Karachi Institutions</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-num"><span class="count-up" data-target="7">0</span></div>
+            <div class="stat-label">Sindh Provincial Bodies</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-num"><span class="count-up" data-target="100">0</span><span>+</span></div>
+            <div class="stat-label">Projects Delivered</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════ TRUST METRICS ═══════ -->
+    <section class="section metrics-section" aria-labelledby="metrics-heading">
+      <div class="container">
+        <div class="reveal" style="margin-bottom:56px;">
+          <div class="section-label">Why institutions choose us</div>
+          <h2 class="section-title" id="metrics-heading">Proven at institutional scale</h2>
+          <p class="section-sub">Every number represents a relationship built on compliance, timely delivery, and procurement integrity.</p>
+        </div>
+
+        <div class="metrics-grid reveal reveal-delay-1">
+          <div class="metric-card">
+            <div class="metric-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M4 20V10a2 2 0 0 1 2-2h4V4h4v4h4a2 2 0 0 1 2 2v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M8 20v-5M12 20v-5M16 20v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="metric-num"><span class="count-up" data-target="50">0</span><span class="plus">+</span></div>
+            <div class="metric-label">Client Institutions</div>
+            <div class="metric-desc">Government, semi-government, and NGO bodies across Sindh.</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="metric-num"><span class="count-up" data-target="100">0</span><span class="plus">+</span></div>
+            <div class="metric-label">Projects Delivered</div>
+            <div class="metric-desc">Procurement orders fulfilled on-time with full documentation.</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="10" r="2" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="metric-num"><span class="count-up" data-target="2">0</span></div>
+            <div class="metric-label">Regions Served</div>
+            <div class="metric-desc">Karachi metropolitan area and province-wide Sindh institutions.</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="metric-num"><span class="count-up" data-target="5">0</span><span class="plus">+</span></div>
+            <div class="metric-label">Years Active</div>
+            <div class="metric-desc">Sustained institutional presence and supply chain reliability.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ TOOLBAR ═══════ -->
+    <div class="toolbar-section" id="client-list">
+      <div class="container">
+        <div class="toolbar reveal" role="region" aria-label="Client list controls">
+          <div class="search-wrap">
+            <span class="search-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                <path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <input id="hxSearch" class="search-input" type="search" inputmode="search"
+                   autocomplete="off" spellcheck="false"
+                   placeholder="Search institutions — JPMC, NICH, Lyari, Hyderabad…"
+                   aria-label="Search institutions">
+            <button id="hxClear" class="search-clear" type="button" aria-label="Clear search">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                <path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="filter-group" role="group" aria-label="Filter by region">
+            <button class="filter-btn" data-filter="all" aria-pressed="true" type="button">All Regions</button>
+            <button class="filter-btn" data-filter="karachi" aria-pressed="false" type="button">Karachi</button>
+            <button class="filter-btn" data-filter="sindh" aria-pressed="false" type="button">Sindh</button>
+          </div>
+
+          <div class="count-chips">
+            <span class="count-chip">
+              <span class="chip-dot navy"></span>
+              Total: <strong id="totalCount">0</strong>
+            </span>
+            <span class="count-chip">
+              <span class="chip-dot green"></span>
+              Visible: <strong id="visibleCount">0</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ CLIENT CARDS ═══════ -->
+    <section class="clients-section" aria-label="Client institution list">
+      <div class="container">
+        <div class="clients-grid">
+
+          <!-- KARACHI -->
+          <div data-group="karachi">
+            <div class="client-card reveal">
+              <div class="card-header">
+                <div class="card-header-left">
+                  <div class="card-icon-row">
+                    <div class="card-icon" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 20V10a2 2 0 0 1 2-2h4V4h4v4h4a2 2 0 0 1 2 2v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M8 20v-6M12 20v-6M16 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <span class="card-region-tag">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>
+                      Karachi Metropolitan
+                    </span>
+                  </div>
+                  <h2 class="card-title">Karachi Institutions</h2>
+                  <p class="card-desc">Government hospitals, town health offices, nursing institutes, and provincial departments within Karachi.</p>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                  <span class="card-badge badge-active"><span class="badge-dot"></span> Active</span>
+                  <span class="card-badge badge-count"><span class="badge-dot"></span> <span id="karachiCount">0</span> Listed</span>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <ul class="inst-list" id="listKarachi" aria-label="Karachi institutions">
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">PM&amp;I Cell Govt. of Sindh Health Department, Karachi</span><span class="inst-type">Govt. Dept.</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Dr. Ruth K.M. Pfau, Civil Hospital, Karachi</span><span class="inst-type">Hospital</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Jinnah Postgraduate Medical Center, Karachi</span><span class="inst-type">Hospital</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">PPHI Sindh Karachi</span><span class="inst-type">NGO</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">National Institute of Child Health (NICH), Karachi</span><span class="inst-type">Institute</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Sindh Govt. Lyari General Hospital, Karachi</span><span class="inst-type">Hospital</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">SBB Accident &amp; Emergency Trauma Center Karachi</span><span class="inst-type">Hospital</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Sindh Government Hospital New Karachi</span><span class="inst-type">Hospital</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Sindh Institute of Child Health &amp; Neonatology (SICHN), Karachi</span><span class="inst-type">Institute</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Sindh Government Hospital Qatar Hospital Orangi Town, Karachi</span><span class="inst-type">Hospital</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Sindh Employee Social Security Institution (SEESI) Karachi</span><span class="inst-type">Institution</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Sindh Government Hospital Saudabad Karachi</span><span class="inst-type">Hospital</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Sindh Government Hospital Korangi #05 Karachi</span><span class="inst-type">Hospital</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">EDO Health Office Karachi</span><span class="inst-type">Govt. Office</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Sindh Government Hospital Ibrahim Hyderi Karachi</span><span class="inst-type">Hospital</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Principal Public Health School Karachi</span><span class="inst-type">Education</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">50 Bedded Hospital Shah Faisal Karachi</span><span class="inst-type">Hospital</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Nursing Institute Ayaz Samoon Lyari Karachi</span><span class="inst-type">Education</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Nursing Institute Public Health School Karachi</span><span class="inst-type">Education</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Town Health Officer Korangi Town Karachi</span><span class="inst-type">Govt. Office</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Town Health Officer Landhi Town Karachi</span><span class="inst-type">Govt. Office</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Town Health Officer Bin Qasim Town Karachi</span><span class="inst-type">Govt. Office</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Town Health Officer Gulshan-e-Iqbal Town Karachi</span><span class="inst-type">Govt. Office</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Town Health Officer Malir Town Karachi</span><span class="inst-type">Govt. Office</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Town Health Officer Baldia Town Karachi</span><span class="inst-type">Govt. Office</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Town Health Officer Saddar Town Karachi</span><span class="inst-type">Govt. Office</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Town Health Officer Shah Faisal Town Karachi</span><span class="inst-type">Govt. Office</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Town Health Officer Lyari Town Karachi</span><span class="inst-type">Govt. Office</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Town Health Officer Orangi Town Karachi</span><span class="inst-type">Govt. Office</span></li>
+                  <li class="inst-item" data-region="karachi"><span class="inst-marker"></span><span class="inst-name">Sindh Government Hospital Liaquatabad Karachi</span><span class="inst-type">Hospital</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- SINDH -->
+          <div data-group="sindh">
+            <div class="client-card reveal reveal-delay-1">
+              <div class="card-header">
+                <div class="card-header-left">
+                  <div class="card-icon-row">
+                    <div class="card-icon" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    </div>
+                    <span class="card-region-tag">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="1.5"/></svg>
+                      Province-Wide Sindh
+                    </span>
+                  </div>
+                  <h2 class="card-title">Sindh Institutions</h2>
+                  <p class="card-desc">Provincial hospitals, district health offices, and medical colleges serving communities across the breadth of Sindh.</p>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                  <span class="card-badge badge-ongoing"><span class="badge-dot"></span> Ongoing</span>
+                  <span class="card-badge badge-count"><span class="badge-dot"></span> <span id="sindhCount">0</span> Listed</span>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <ul class="inst-list" id="listSindh" aria-label="Sindh institutions">
+                  <li class="inst-item" data-region="sindh"><span class="inst-marker navy"></span><span class="inst-name">District Health Officer (All Sindh)</span><span class="inst-type">Govt. Office</span></li>
+                  <li class="inst-item" data-region="sindh"><span class="inst-marker navy"></span><span class="inst-name">Taluka Hospitals (All Sindh)</span><span class="inst-type">Hospital</span></li>
+                  <li class="inst-item" data-region="sindh"><span class="inst-marker navy"></span><span class="inst-name">Liaquat University Hospital Hyderabad, Jamshoro</span><span class="inst-type">University Hospital</span></li>
+                  <li class="inst-item" data-region="sindh"><span class="inst-marker navy"></span><span class="inst-name">Chandka Medical College Hospital, Larkana</span><span class="inst-type">College Hospital</span></li>
+                  <li class="inst-item" data-region="sindh"><span class="inst-marker navy"></span><span class="inst-name">Ghulam Mohammed Mahar Medical College Hospital, Sukkur</span><span class="inst-type">College Hospital</span></li>
+                  <li class="inst-item" data-region="sindh"><span class="inst-marker navy"></span><span class="inst-name">Peoples Medical College Hospital Nawabshah Shaheed Benazirabad</span><span class="inst-type">College Hospital</span></li>
+                  <li class="inst-item" data-region="sindh"><span class="inst-marker navy"></span><span class="inst-name">Syed Abdullah Shah Institute Of Medical Sciences, Sehwan</span><span class="inst-type">Institute</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Empty state -->
+        <div id="emptyState" class="empty-state" role="status" aria-live="polite">
+          <h3>No matching institutions</h3>
+          <p>Try a different keyword — e.g., "JPMC", "NICH", "Hyderabad", "Korangi" — or reset the filter to All Regions.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════ LOGO WALL ═══════ -->
+    <section class="section logos-section" aria-labelledby="logos-heading">
+      <div class="container">
+        <div class="logos-intro reveal">
+          <div>
+            <div class="section-label">At a glance</div>
+            <h2 class="section-title" id="logos-heading">Institution index</h2>
+          </div>
+          <p class="section-sub" style="margin-bottom:0;">Key abbreviations and shorthand — how procurement teams reference our supply relationships.</p>
+        </div>
+
+        <div class="logo-wall reveal reveal-delay-1">
+          <div class="logo-cell"><div class="logo-abbr">JPMC</div><div class="logo-name">Jinnah Postgraduate Medical Centre</div></div>
+          <div class="logo-cell"><div class="logo-abbr">NICH</div><div class="logo-name">National Institute of Child Health</div></div>
+          <div class="logo-cell"><div class="logo-abbr">SICHN</div><div class="logo-name">Sindh Inst. of Child Health &amp; Neonatology</div></div>
+          <div class="logo-cell"><div class="logo-abbr">SEESI</div><div class="logo-name">Sindh Employee Social Security Institution</div></div>
+          <div class="logo-cell"><div class="logo-abbr">PPHI</div><div class="logo-name">People's Primary Healthcare Initiative</div></div>
+          <div class="logo-cell"><div class="logo-abbr">LUH</div><div class="logo-name">Liaquat University Hospital Hyderabad</div></div>
+          <div class="logo-cell"><div class="logo-abbr">SBB</div><div class="logo-name">SBB Accident &amp; Emergency Trauma Centre</div></div>
+          <div class="logo-cell"><div class="logo-abbr">CMCH</div><div class="logo-name">Chandka Medical College Hospital, Larkana</div></div>
+          <div class="logo-cell"><div class="logo-abbr">GMMMC</div><div class="logo-name">G.M. Mahar Medical College Hospital, Sukkur</div></div>
+          <div class="logo-cell"><div class="logo-abbr">PMCH</div><div class="logo-name">Peoples Medical College Hospital Nawabshah</div></div>
+          <div class="logo-cell"><div class="logo-abbr">SASIMS</div><div class="logo-name">Syed Abdullah Shah Inst. Medical Sciences</div></div>
+          <div class="logo-cell"><div class="logo-abbr">DHO</div><div class="logo-name">District Health Officer (All Sindh)</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ TRUST CTA ═══════ -->
+    <section class="section trust-section" aria-labelledby="trust-heading">
+      <div class="container">
+        <div class="trust-card reveal">
+          <div class="trust-bg-orb" aria-hidden="true"></div>
+          <div class="trust-inner">
+            <div class="trust-text">
+              <div class="section-label" style="margin-bottom:16px;">Procurement Partnership</div>
+              <h2 class="trust-title" id="trust-heading">Government &amp; private institutions are welcome</h2>
+              <p class="trust-sub">Hospitals, clinics, laboratories, NGOs, corporates and institutions can contact us for supply inquiries with full documentation and procurement compliance support.</p>
+            </div>
+            <div class="trust-actions">
+              <a class="btn-primary" href="contact.html">Institutional Inquiry</a>
+              <a class="btn-ghost" href="contact.html">Request Quotation</a>
+              <div class="trust-note">Verified · Documented · Compliant</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-note">© 2025 Haq Enterprises. All rights reserved.</div>
+      <div class="footer-note">Medical · Pharmaceutical · General Supplies — Karachi, Sindh</div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    "use strict";
+
+    /* ── DOM refs ── */
+    var searchInput  = document.getElementById("hxSearch");
+    var clearBtn     = document.getElementById("hxClear");
+    var filterBtns   = Array.from(document.querySelectorAll(".filter-btn"));
+    var emptyState   = document.getElementById("emptyState");
+    var totalEl      = document.getElementById("totalCount");
+    var visibleEl    = document.getElementById("visibleCount");
+    var karachiCntEl = document.getElementById("karachiCount");
+    var sindhCntEl   = document.getElementById("sindhCount");
+
+    var allItems = Array.from(document.querySelectorAll(".inst-item"));
+    var currentFilter = "all";
+
+    /* ── helpers ── */
+    function escRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+
+    function stripMarks(li) {
+      var nameEl = li.querySelector(".inst-name");
+      if (!nameEl) return;
+      var marks = nameEl.querySelectorAll("mark.hx-mark");
+      marks.forEach(function (m) {
+        var t = document.createTextNode(m.textContent);
+        m.parentNode.replaceChild(t, m);
+        m.parentNode.normalize();
+      });
+    }
+
+    function applyHL(li, term) {
+      stripMarks(li);
+      if (!term) return;
+      var nameEl = li.querySelector(".inst-name");
+      if (!nameEl) return;
+      var raw = nameEl.textContent;
+      var rx = new RegExp("(" + escRe(term) + ")", "ig");
+      nameEl.innerHTML = raw.replace(rx, '<mark class="hx-mark">$1</mark>');
+    }
+
+    function countVisible(selector) {
+      return Array.from(document.querySelectorAll(selector))
+                  .filter(function (li) { return !li.hidden; }).length;
+    }
+
+    /* ── main filter/search ── */
+    function apply() {
+      var term = (searchInput.value || "").trim();
+      var termLow = term.toLowerCase();
+      var total = 0;
+
+      emptyState.classList.remove("visible");
+      allItems.forEach(function (li) {
+        var region = (li.getAttribute("data-region") || "").toLowerCase();
+        var nameEl = li.querySelector(".inst-name");
+        var text = nameEl ? nameEl.textContent.toLowerCase() : "";
+
+        var passF = currentFilter === "all" || region === currentFilter;
+        var passS = !term || text.indexOf(termLow) !== -1;
+        var show = passF && passS;
+
+        li.hidden = !show;
+        if (show) { applyHL(li, term); total++; }
+        else stripMarks(li);
+      });
+
+      var kC = countVisible("#listKarachi .inst-item");
+      var sC = countVisible("#listSindh .inst-item");
+
+      totalEl.textContent    = String(allItems.length);
+      visibleEl.textContent  = String(total);
+      karachiCntEl.textContent = String(document.querySelectorAll("#listKarachi .inst-item").length);
+      sindhCntEl.textContent   = String(document.querySelectorAll("#listSindh .inst-item").length);
+
+      /* hide entire column when filtered */
+      var kCol = document.querySelector('[data-group="karachi"]');
+      var sCol = document.querySelector('[data-group="sindh"]');
+      if (kCol) kCol.hidden = currentFilter === "sindh";
+      if (sCol) sCol.hidden = currentFilter === "karachi";
+
+      if (total === 0) emptyState.classList.add("visible");
+    }
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        currentFilter = (btn.getAttribute("data-filter") || "all").toLowerCase();
+        filterBtns.forEach(function (b) {
+          b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+        });
+        apply();
+      });
+    });
+
+    searchInput.addEventListener("input", apply);
+    clearBtn.addEventListener("click", function () {
+      searchInput.value = ""; searchInput.focus(); apply();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && document.activeElement === searchInput) {
+        searchInput.value = ""; apply();
+      }
+    });
+
+    apply();
+
+    /* ── Scroll reveal ── */
+    var revealEls = Array.from(document.querySelectorAll(".reveal"));
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add("in-view"); });
+    }
+
+    /* ── Animated counters ── */
+    var counters = Array.from(document.querySelectorAll(".count-up"));
+    function animateCounter(el) {
+      var target = parseInt(el.getAttribute("data-target"), 10);
+      var duration = 1600;
+      var start = performance.now();
+      function tick(now) {
+        var p = Math.min((now - start) / duration, 1);
+        var ease = 1 - Math.pow(1 - p, 3); /* ease-out-cubic */
+        el.textContent = String(Math.round(ease * target));
+        if (p < 1) requestAnimationFrame(tick);
+        else el.textContent = String(target);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    /* Trigger counters on scroll */
+    if ("IntersectionObserver" in window) {
+      var cIo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            cIo.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      counters.forEach(function (c) { cIo.observe(c); });
+    } else {
+      counters.forEach(function (c) { c.textContent = c.getAttribute("data-target"); });
+    }
+
+  })();
+  </script>
+
+</body>
+</html>

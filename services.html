@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#001122" name="theme-color"/>
+  <title>Haq Enterprises — Institutional Supply Services</title>
+  <meta content="Institutional services by Haq Enterprises: pharmaceuticals, medical equipment, surgical instruments, hospital furniture, logistics, after-sales support, general and food supplies." name="description"/>
+  <meta content="index, follow" name="robots"/>
+  <link href="services.html" rel="canonical"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ═══════════════════════════════════════════════════════
+       HAQ ENTERPRISES — SERVICES PAGE
+       System: Dark Institutional Luxury
+    ═══════════════════════════════════════════════════════ */
+    :root {
+      --ink:          #040810;
+      --ink-2:        #090e1a;
+      --ink-3:        #0f1828;
+      --navy:         #001F3F;
+      --navy-2:       #002a56;
+      --navy-3:       #003470;
+      --forest:       #012a1a;
+      --forest-2:     #013d26;
+      --forest-3:     #016040;
+      --platinum:     #dde4ed;
+      --platinum-2:   #c4cfde;
+      --gold:         #c9a84c;
+      --gold-2:       #e2c26a;
+      --gold-light:   #f5e6b8;
+      --white:        #ffffff;
+      --glass:        rgba(255,255,255,0.045);
+      --glass-2:      rgba(255,255,255,0.08);
+      --glass-b:      rgba(255,255,255,0.10);
+      --glass-b2:     rgba(255,255,255,0.16);
+      --ease:         cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--ink); color: var(--platinum); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--ink-2); }
+    ::-webkit-scrollbar-thumb { background: var(--navy-3); border-radius: 3px; }
+    ::selection { background: rgba(201,168,76,0.25); color: var(--white); }
+    a { text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ── Layout ── */
+    .container { max-width: 1260px; margin: 0 auto; padding: 0 40px; }
+    .section { padding: 100px 0; }
+    @media (max-width: 768px) { .container { padding: 0 20px; } .section { padding: 72px 0; } }
+
+    /* ── Navigation ── */
+    .nav {
+      position: sticky; top: 0; z-index: 999;
+      background: rgba(4,8,16,0.88);
+      backdrop-filter: blur(20px) saturate(160%);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; }
+    .nav-brand-mark {
+      width: 40px; height: 40px; border-radius: 10px; flex: 0 0 auto;
+      background: linear-gradient(135deg, var(--navy-3), var(--forest-2));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700;
+      color: var(--gold-light); border: 1px solid rgba(201,168,76,0.25);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+    .nav-brand-name { font-size: 15px; font-weight: 700; color: var(--white); line-height: 1; }
+    .nav-brand-sub { font-size: 10px; font-weight: 400; color: rgba(255,255,255,0.38); letter-spacing: 0.05em; margin-top: 3px; }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a { padding: 8px 13px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.55); transition: color .2s, background .2s; }
+    .nav-links a:hover { color: var(--white); background: var(--glass); }
+    .nav-links a.active { color: var(--white); background: var(--glass-2); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 18px; border-radius: 9px;
+      background: linear-gradient(135deg, var(--forest-2), var(--navy-2));
+      color: var(--white); font-size: 13px; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.13);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+      transition: transform .2s var(--ease), box-shadow .2s;
+    }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.45); color: var(--white); }
+    @media (max-width: 900px) { .nav-links { display: none; } .nav-cta { display: none; } }
+
+    /* ── Section labels / headings ── */
+    .s-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 18px;
+    }
+    .s-label::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+    .s-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(34px, 4.5vw, 54px);
+      font-weight: 600; line-height: 1.07;
+      letter-spacing: -0.02em; color: var(--white); margin-bottom: 16px;
+    }
+    .s-sub { font-size: 16px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.42); }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 26px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--forest-2), var(--navy-2));
+      color: var(--white); font-family: 'Outfit', sans-serif;
+      font-size: 14px; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+      transition: transform .25s var(--ease), box-shadow .25s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 50px rgba(1,61,38,0.25); color: var(--white); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 26px; border-radius: 10px;
+      background: var(--glass); border: 1px solid var(--glass-b);
+      color: rgba(255,255,255,0.7); font-family: 'Outfit', sans-serif;
+      font-size: 14px; font-weight: 600;
+      transition: color .2s, background .2s, transform .2s;
+    }
+    .btn-ghost:hover { color: var(--white); background: var(--glass-2); transform: translateY(-2px); }
+
+    /* ── Scroll reveal ── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-1 { transition-delay: .10s; }
+    .reveal-2 { transition-delay: .20s; }
+    .reveal-3 { transition-delay: .30s; }
+    .reveal-4 { transition-delay: .40s; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+    /* ══════════════════════════════════════════
+       HERO / PAGE HEADER
+    ══════════════════════════════════════════ */
+    .page-hero {
+      position: relative; overflow: hidden;
+      padding: 120px 0 100px;
+      min-height: 52vh;
+      display: flex; align-items: center;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 90% 80% at 50% -10%, rgba(0,52,112,0.72), transparent 58%),
+        radial-gradient(ellipse 60% 50% at 0% 90%, rgba(1,61,38,0.5), transparent 55%),
+        radial-gradient(ellipse 50% 45% at 100% 80%, rgba(0,32,63,0.55), transparent 55%),
+        linear-gradient(180deg, #050a14 0%, #040810 60%, #060d10 100%);
+    }
+    .page-hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 15%, transparent 72%);
+    }
+    .page-hero-orb-a {
+      position: absolute; width: 600px; height: 600px;
+      top: -200px; right: -100px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,52,112,0.3), transparent 65%);
+      filter: blur(80px); pointer-events: none;
+      animation: heroOrbDrift 20s ease-in-out infinite alternate;
+    }
+    .page-hero-orb-b {
+      position: absolute; width: 400px; height: 400px;
+      bottom: -80px; left: -60px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(1,61,38,0.28), transparent 65%);
+      filter: blur(70px); pointer-events: none;
+      animation: heroOrbDrift 26s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes heroOrbDrift { from{transform:translate(0,0)} to{transform:translate(30px,20px)} }
+
+    .page-hero-content { position: relative; z-index: 2; width: 100%; }
+    .page-hero-inner { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: end; }
+    @media (max-width: 768px) { .page-hero-inner { grid-template-columns: 1fr; } }
+
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 7px 16px; border-radius: 999px;
+      border: 1px solid rgba(201,168,76,0.28); background: rgba(201,168,76,0.07);
+      font-size: 11px; font-weight: 600; color: var(--gold-light);
+      letter-spacing: 0.13em; text-transform: uppercase;
+      margin-bottom: 24px;
+      animation: slideUp 0.9s var(--ease-out) both;
+    }
+    .eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); animation: blink 2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.35} }
+
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(44px, 6.5vw, 80px);
+      font-weight: 600; line-height: 1.02;
+      letter-spacing: -0.025em; color: var(--white);
+      margin-bottom: 20px;
+      animation: slideUp 0.9s var(--ease-out) 0.1s both;
+    }
+    .hero-h1 em { font-style: italic; background: linear-gradient(130deg, var(--gold-light), var(--gold), #d4a83a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub {
+      font-size: 17px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.48);
+      max-width: 560px; animation: slideUp 0.9s var(--ease-out) 0.2s both;
+    }
+
+    /* Trust chips row */
+    .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; animation: slideUp 0.9s var(--ease-out) 0.3s both; }
+    .hero-chip {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 7px 14px; border-radius: 999px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09);
+      font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.55);
+    }
+    .hero-chip svg { color: var(--gold); flex: 0 0 auto; }
+
+    .hero-cta { animation: slideUp 0.9s var(--ease-out) 0.25s both; text-align: right; }
+    @media (max-width: 768px) { .hero-cta { text-align: left; } }
+
+    /* Stat bar under hero */
+    .hero-statbar {
+      display: flex; gap: 0;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px; overflow: hidden;
+      background: rgba(255,255,255,0.025);
+      backdrop-filter: blur(10px);
+      margin-top: 52px;
+      animation: slideUp 0.9s var(--ease-out) 0.4s both;
+    }
+    .hstat { flex: 1; padding: 22px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.07); }
+    .hstat:last-child { border-right: none; }
+    .hstat-n { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: var(--white); line-height: 1; letter-spacing: -0.03em; }
+    .hstat-n span { color: var(--gold); }
+    .hstat-l { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.35); letter-spacing: 0.09em; text-transform: uppercase; margin-top: 6px; }
+    @media (max-width: 640px) { .hero-statbar { flex-wrap: wrap; } .hstat { flex: 1 1 50%; } .hstat:nth-child(2) { border-right: none; } .hstat:nth-child(1),.hstat:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.07); } }
+
+    @keyframes slideUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:none} }
+
+    /* ══════════════════════════════════════════
+       SERVICES CARDS GRID
+    ══════════════════════════════════════════ */
+    .cards-section { background: var(--ink); }
+    .cards-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 56px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* Flagship card (first) */
+    .svc-card {
+      background: rgba(9,14,26,0.72);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 22px; padding: 28px 26px 30px;
+      position: relative; overflow: hidden;
+      transition: transform .32s var(--ease), box-shadow .32s, border-color .32s;
+      cursor: default;
+    }
+    .svc-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent 5%, rgba(201,168,76,0.45) 50%, transparent 95%);
+      opacity: 0; transition: opacity .32s;
+    }
+    /* Light sweep */
+    .svc-card::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(112deg, transparent 42%, rgba(255,255,255,0.016) 50%, transparent 58%);
+      opacity: 0; transition: opacity .3s;
+    }
+    .svc-card:hover { transform: translateY(-5px); box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 60px rgba(0,52,112,0.22); border-color: rgba(201,168,76,0.18); }
+    .svc-card:hover::before, .svc-card:hover::after { opacity: 1; }
+
+    .svc-card.featured {
+      grid-column: span 1;
+      background: linear-gradient(145deg, rgba(0,52,112,0.28) 0%, rgba(9,14,26,0.85) 50%, rgba(1,61,38,0.2) 100%);
+      border-color: rgba(201,168,76,0.14);
+    }
+
+    .svc-ico {
+      width: 52px; height: 52px; border-radius: 15px; margin-bottom: 22px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(0,52,112,0.45), rgba(1,61,38,0.32));
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--gold-light);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+      transition: box-shadow .32s, transform .32s;
+    }
+    .svc-card:hover .svc-ico { box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 24px rgba(201,168,76,0.18); transform: scale(1.04); }
+
+    .svc-num {
+      position: absolute; top: 24px; right: 24px;
+      font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500;
+      color: rgba(255,255,255,0.18); letter-spacing: 0.06em;
+    }
+
+    .svc-h { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 600; color: var(--white); margin-bottom: 8px; line-height: 1.2; }
+    .svc-sub { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.3); letter-spacing: 0.10em; text-transform: uppercase; margin-bottom: 14px; }
+    .svc-body { font-size: 13.5px; font-weight: 300; line-height: 1.72; color: rgba(255,255,255,0.45); margin-bottom: 18px; }
+
+    .svc-bullets { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .svc-bullets li {
+      display: flex; align-items: center; gap: 9px;
+      font-size: 12.5px; font-weight: 400; color: rgba(255,255,255,0.52);
+    }
+    .svc-bullets li::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%; flex: 0 0 auto;
+      background: var(--forest-3); box-shadow: 0 0 6px rgba(1,96,64,0.4);
+    }
+
+    .svc-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 10px; border-radius: 999px; margin-top: 16px;
+      background: rgba(1,96,64,0.12); border: 1px solid rgba(1,96,64,0.22);
+      font-size: 10px; font-weight: 700; color: #4ade80; letter-spacing: 0.06em; text-transform: uppercase;
+    }
+
+    /* Wide card spanning 2 columns */
+    .svc-card.wide { grid-column: span 2; }
+    @media (max-width: 900px) { .svc-card.wide { grid-column: span 1; } }
+
+    /* ══════════════════════════════════════════
+       PROCESS / WORKFLOW SECTION
+    ══════════════════════════════════════════ */
+    .process-section {
+      background: linear-gradient(180deg, var(--ink) 0%, #06101a 50%, var(--ink) 100%);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .process-header { text-align: center; max-width: 580px; margin: 0 auto 72px; }
+    .process-header .s-label { justify-content: center; }
+    .process-header .s-label::before { display: none; }
+
+    .process-track {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      position: relative;
+      gap: 0;
+    }
+    @media (max-width: 768px) { .process-track { grid-template-columns: 1fr; gap: 2px; } }
+
+    /* Horizontal connector line */
+    .process-track::before {
+      content: ''; position: absolute;
+      top: 38px; left: calc(12.5% + 20px); right: calc(12.5% + 20px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.35) 20%, rgba(201,168,76,0.35) 80%, transparent);
+      pointer-events: none; z-index: 0;
+    }
+    @media (max-width: 768px) { .process-track::before { display: none; } }
+
+    .process-step {
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      padding: 0 20px 48px; position: relative; z-index: 1;
+    }
+    @media (max-width: 768px) {
+      .process-step {
+        flex-direction: row; align-items: flex-start; text-align: left;
+        padding: 20px 20px; gap: 20px;
+        background: rgba(9,14,26,0.6); border: 1px solid rgba(255,255,255,0.06);
+        border-radius: 16px;
+      }
+    }
+
+    .step-node {
+      width: 76px; height: 76px; border-radius: 50%; flex: 0 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(0,52,112,0.5), rgba(1,61,38,0.4));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 0 8px rgba(201,168,76,0.05);
+      color: var(--gold-light); margin-bottom: 24px;
+      transition: box-shadow .3s, transform .3s;
+    }
+    .process-step:hover .step-node { box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 0 12px rgba(201,168,76,0.1), 0 0 30px rgba(201,168,76,0.15); transform: scale(1.05); }
+    @media (max-width: 768px) { .step-node { margin-bottom: 0; width: 56px; height: 56px; } }
+
+    .step-num {
+      position: absolute; top: -2px; right: -2px;
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--gold); color: var(--ink);
+      font-size: 10px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .step-node-wrap { position: relative; display: inline-flex; margin-bottom: 24px; }
+    @media (max-width: 768px) { .step-node-wrap { margin-bottom: 0; flex: 0 0 auto; } }
+
+    .step-h { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 600; color: var(--white); margin-bottom: 10px; line-height: 1.2; }
+    .step-body { font-size: 13px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.42); }
+
+    /* ══════════════════════════════════════════
+       SERVICE DETAIL BLOCKS (alternating)
+    ══════════════════════════════════════════ */
+    .details-section { background: var(--ink); }
+
+    .detail-block {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+      padding: 72px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .detail-block:last-child { border-bottom: none; }
+    .detail-block.reverse { direction: rtl; }
+    .detail-block.reverse > * { direction: ltr; }
+    @media (max-width: 900px) { .detail-block, .detail-block.reverse { grid-template-columns: 1fr; gap: 40px; direction: ltr; } }
+
+    .detail-text .s-label { margin-bottom: 14px; }
+    .detail-h { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px,3.5vw,42px); font-weight: 600; color: var(--white); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 16px; }
+    .detail-body { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.45); margin-bottom: 28px; }
+
+    .detail-points { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .detail-point {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 14px 18px; border-radius: 14px;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+      transition: background .2s, border-color .2s;
+    }
+    .detail-point:hover { background: rgba(255,255,255,0.055); border-color: rgba(201,168,76,0.18); }
+    .detail-point-ico {
+      width: 34px; height: 34px; border-radius: 10px; flex: 0 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(1,96,64,0.14); border: 1px solid rgba(1,96,64,0.24);
+      color: #4ade80;
+    }
+    .detail-point-text { flex: 1; }
+    .detail-point-h { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 3px; }
+    .detail-point-sub { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.38); line-height: 1.5; }
+
+    /* Visual panel */
+    .detail-visual {
+      background: rgba(9,14,26,0.7);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px; padding: 40px 36px;
+      position: relative; overflow: hidden;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.5);
+    }
+    .detail-visual::before {
+      content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
+    }
+    .detail-visual-orb {
+      position: absolute; width: 300px; height: 300px; border-radius: 50%;
+      right: -80px; top: -80px;
+      background: radial-gradient(circle, rgba(0,52,112,0.22), transparent 65%);
+      filter: blur(50px); pointer-events: none;
+    }
+    .visual-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em; margin-bottom: 24px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .visual-title::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
+
+    .visual-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .visual-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px; border-radius: 12px;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+      font-size: 13.5px; font-weight: 400; color: rgba(255,255,255,0.65);
+      transition: background .2s;
+    }
+    .visual-item:hover { background: rgba(255,255,255,0.06); }
+    .visual-dot {
+      width: 8px; height: 8px; border-radius: 50%; flex: 0 0 auto;
+      background: var(--forest-3); box-shadow: 0 0 8px rgba(1,96,64,0.5);
+    }
+    .visual-dot.navy { background: var(--navy-3); box-shadow: 0 0 8px rgba(0,52,112,0.5); }
+
+    .visual-cert-strip {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
+    }
+    .visual-cert {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 12px; border-radius: 999px;
+      background: rgba(1,96,64,0.12); border: 1px solid rgba(1,96,64,0.22);
+      font-size: 10px; font-weight: 700; color: #4ade80;
+      font-family: 'DM Mono', monospace;
+    }
+
+    /* ══════════════════════════════════════════
+       WHY CHOOSE OUR SERVICES
+    ══════════════════════════════════════════ */
+    .why-section {
+      background: linear-gradient(180deg, var(--ink) 0%, #07101a 100%);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .why-header { text-align: center; max-width: 600px; margin: 0 auto 64px; }
+    .why-header .s-label { justify-content: center; }
+    .why-header .s-label::before { display: none; }
+
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 900px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
+
+    .why-card {
+      padding: 30px 26px; border-radius: 20px;
+      background: rgba(9,14,26,0.65); border: 1px solid rgba(255,255,255,0.07);
+      transition: transform .3s var(--ease), border-color .3s, box-shadow .3s;
+    }
+    .why-card:hover { transform: translateY(-3px); border-color: rgba(201,168,76,0.2); box-shadow: 0 24px 60px rgba(0,0,0,0.45); }
+
+    .why-ico {
+      width: 48px; height: 48px; border-radius: 13px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--glass); border: 1px solid var(--glass-b);
+      color: var(--gold-light); margin-bottom: 20px;
+    }
+    .why-h { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 10px; }
+    .why-body { font-size: 13.5px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.42); }
+
+    /* ══════════════════════════════════════════
+       CLOSING CTA
+    ══════════════════════════════════════════ */
+    .cta-section { background: var(--ink); padding-bottom: 120px; }
+    .cta-card {
+      position: relative; overflow: hidden;
+      border-radius: 28px; border: 1px solid rgba(255,255,255,0.1);
+      padding: 80px 64px; text-align: center;
+      background: linear-gradient(145deg, rgba(0,52,112,0.5) 0%, rgba(1,61,38,0.38) 50%, rgba(4,8,16,0.9) 100%);
+    }
+    .cta-card::before { content:''; position:absolute; top:-1px; left:10%; right:10%; height:1px; background:linear-gradient(90deg,transparent,rgba(201,168,76,0.55),transparent); }
+    .cta-orb-a { position:absolute; width:500px; height:500px; right:-150px; top:-150px; border-radius:50%; background:radial-gradient(circle,rgba(0,52,112,0.3),transparent 65%); filter:blur(60px); pointer-events:none; }
+    .cta-orb-b { position:absolute; width:400px; height:400px; left:-100px; bottom:-100px; border-radius:50%; background:radial-gradient(circle,rgba(1,61,38,0.25),transparent 65%); filter:blur(60px); pointer-events:none; }
+    .cta-inner { position:relative; z-index:1; max-width:600px; margin:0 auto; }
+    .cta-h { font-family:'Cormorant Garamond',serif; font-size:clamp(32px,4.5vw,52px); font-weight:600; color:var(--white); letter-spacing:-0.02em; margin-bottom:16px; line-height:1.1; }
+    .cta-sub { font-size:15px; font-weight:300; line-height:1.75; color:rgba(255,255,255,0.48); margin-bottom:36px; }
+    .cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+    .cta-note { font-size:11px; font-weight:600; color:rgba(255,255,255,0.25); letter-spacing:0.09em; text-transform:uppercase; margin-top:20px; }
+
+    @media (max-width:768px) { .cta-card { padding: 48px 28px; } }
+
+    /* ══════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════ */
+    .footer {
+      background: var(--ink-2); border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 48px 0 28px;
+    }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+  </style>
+</head>
+<body>
+
+  <!-- ══════ NAVIGATION ══════ -->
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand" aria-label="Haq Enterprises Home">
+          <img src="assets/images/logo.png" alt="Haq Enterprises mark" width="44" height="44" loading="eager" style="border-radius:10px;">
+          <div>
+            <div class="nav-brand-name">Haq Enterprises</div>
+            <div class="nav-brand-sub">Medical · Pharmaceutical · General Supplies</div>
+            
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="suppliers.html">Suppliers</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+        </ul>
+        <a href="contact.html" class="nav-cta">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="2"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="2"/></svg>
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <a class="visually-hidden" href="#main" style="position:absolute;left:-9999px;">Skip to content</a>
+
+  <main id="main">
+
+    <!-- ══════ HERO / PAGE HEADER ══════ -->
+    <header class="page-hero" aria-label="Services page header">
+      <div class="page-hero-bg" aria-hidden="true"></div>
+      <div class="page-hero-grid" aria-hidden="true"></div>
+      <div class="page-hero-orb-a" aria-hidden="true"></div>
+      <div class="page-hero-orb-b" aria-hidden="true"></div>
+
+      <div class="container page-hero-content">
+        <div class="page-hero-inner">
+          <div>
+            <div class="hero-eyebrow"><div class="eyebrow-dot"></div>Institutional Supply Capabilities</div>
+            <h1 class="hero-h1">Services built for<br><em>institutional procurement</em></h1>
+            <p class="hero-sub">Operationally structured service categories aligned to government and private sector procurement workflows — documentation-led, compliance-first.</p>
+            <div class="hero-chips">
+              <span class="hero-chip"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>Drug Licensed</span>
+              <span class="hero-chip"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>ISO 9001:2015</span>
+              <span class="hero-chip"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>ISO 13485:2016</span>
+              <span class="hero-chip"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>Sindh Food Authority</span>
+            </div>
+          </div>
+          <div class="hero-cta">
+            <a class="btn-primary" href="contact.html">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="2"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="2"/></svg>
+              Supply Inquiry
+            </a>
+          </div>
+        </div>
+
+        <!-- stat bar -->
+        <div class="hero-statbar" role="region" aria-label="Service summary">
+          <div class="hstat"><div class="hstat-n"><span class="count-up" data-target="8">0</span></div><div class="hstat-l">Service Lines</div></div>
+          <div class="hstat"><div class="hstat-n"><span class="count-up" data-target="50">0</span><span>+</span></div><div class="hstat-l">Institutions Served</div></div>
+          <div class="hstat"><div class="hstat-n"><span class="count-up" data-target="20">0</span><span>+</span></div><div class="hstat-l">Years Experience</div></div>
+          <div class="hstat"><div class="hstat-n"><span class="count-up" data-target="7">0</span></div><div class="hstat-l">Active Licenses</div></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══════ SERVICE CARDS GRID ══════ -->
+    <section class="section cards-section" aria-labelledby="cards-h">
+      <div class="container">
+        <div class="cards-header">
+          <div class="reveal">
+            <div class="s-label">All Services</div>
+            <h2 class="s-title" id="cards-h">Eight institutional supply lines</h2>
+          </div>
+          <p class="s-sub reveal reveal-1" style="max-width:380px;margin-bottom:0;">Each category is structured around institutional procurement requirements and operating documentation.</p>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- 01 Pharmaceuticals -->
+          <article class="svc-card featured reveal" aria-labelledby="svc1">
+            <div class="svc-num">01</div>
+            <div class="svc-ico" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.7"/><path d="M19 3h-4a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.7"/><path d="M9 13H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.7"/><path d="M19 13h-4a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.7"/></svg>
+            </div>
+            <h3 class="svc-h" id="svc1">Pharmaceutical Supply</h3>
+            <div class="svc-sub">Wholesale Distribution</div>
+            <p class="svc-body">License-aligned pharmaceutical supply for institutional procurement, sourced through verified wholesale channels with full documentation.</p>
+            <ul class="svc-bullets">
+              <li>Government hospital formulary alignment</li>
+              <li>Branded &amp; generic supply pathways</li>
+              <li>Cold-chain capable sourcing</li>
+            </ul>
+            <div class="svc-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>Drug Licensed</div>
+          </article>
+
+          <!-- 02 Medical Equipment -->
+          <article class="svc-card reveal reveal-1" aria-labelledby="svc2">
+            <div class="svc-num">02</div>
+            <div class="svc-ico" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="svc-h" id="svc2">Medical Equipment &amp; Devices</h3>
+            <div class="svc-sub">Institutional Procurement</div>
+            <p class="svc-body">Devices, diagnostic equipment, and consumables aligned to institutional clinical specifications and ISO 13485 quality standards.</p>
+            <ul class="svc-bullets">
+              <li>Diagnostic &amp; monitoring devices</li>
+              <li>Lab &amp; clinical equipment</li>
+              <li>ISO 13485:2016 aligned sourcing</li>
+            </ul>
+          </article>
+
+          <!-- 03 Surgical & Disposable -->
+          <article class="svc-card reveal reveal-2" aria-labelledby="svc3">
+            <div class="svc-num">03</div>
+            <div class="svc-ico" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="m19 3-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="m13 9-2 2-1.5-1.5L5 14a2.83 2.83 0 0 0 4 4l7-7-1.5-1.5 2-2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="svc-h" id="svc3">Surgical &amp; Disposable</h3>
+            <div class="svc-sub">Hospitals, Clinics &amp; Labs</div>
+            <p class="svc-body">Surgical instruments, disposable consumables, and procedure supplies for clinical environments — batch-consistent and documented.</p>
+            <ul class="svc-bullets">
+              <li>Sterile surgical instruments</li>
+              <li>Single-use consumables</li>
+              <li>Lab &amp; specimen handling supplies</li>
+            </ul>
+          </article>
+
+          <!-- 04 Hospital Furniture -->
+          <article class="svc-card reveal" aria-labelledby="svc4">
+            <div class="svc-num">04</div>
+            <div class="svc-ico" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="15" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="1.7"/></svg>
+            </div>
+            <h3 class="svc-h" id="svc4">Hospital Furniture</h3>
+            <div class="svc-sub">Clinical Environment Fit</div>
+            <p class="svc-body">Clinical and administrative furniture for hospital wards, OPDs, nursing stations, and institutional setups — built to specification.</p>
+            <ul class="svc-bullets">
+              <li>Hospital beds &amp; patient furniture</li>
+              <li>Nursing station &amp; OPD furniture</li>
+              <li>Custom institutional specification</li>
+            </ul>
+          </article>
+
+          <!-- 05 Logistics -->
+          <article class="svc-card reveal reveal-1" aria-labelledby="svc5">
+            <div class="svc-num">05</div>
+            <div class="svc-ico" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 7h13v10H3V7Z" stroke="currentColor" stroke-width="1.7"/><path d="M16 10h3l2 2v5h-5v-7Z" stroke="currentColor" stroke-width="1.7"/><circle cx="7" cy="19" r="1.5" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="19" r="1.5" stroke="currentColor" stroke-width="1.7"/></svg>
+            </div>
+            <h3 class="svc-h" id="svc5">Logistics &amp; Distribution</h3>
+            <div class="svc-sub">Controlled Delivery Model</div>
+            <p class="svc-body">Structured distribution support with documented chain of custody from sourcing through last-mile delivery to institutional buyers.</p>
+            <ul class="svc-bullets">
+              <li>Documented delivery tracking</li>
+              <li>Province-wide Sindh distribution</li>
+              <li>Institutional delivery scheduling</li>
+            </ul>
+          </article>
+
+          <!-- 06 After-Sales -->
+          <article class="svc-card reveal reveal-2" aria-labelledby="svc6">
+            <div class="svc-num">06</div>
+            <div class="svc-ico" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="svc-h" id="svc6">Sales &amp; After-Sales Support</h3>
+            <div class="svc-sub">Service Coordination</div>
+            <p class="svc-body">Coordinated after-sales service aligned to supply execution — including follow-up, documentation support, and procurement continuity.</p>
+            <ul class="svc-bullets">
+              <li>Procurement follow-up coordination</li>
+              <li>Documentation &amp; warranty support</li>
+              <li>Recurring supply management</li>
+            </ul>
+          </article>
+
+          <!-- 07 General Supply (wide) -->
+          <article class="svc-card wide reveal" aria-labelledby="svc7">
+            <div class="svc-num">07</div>
+            <div class="svc-ico" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.7"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="svc-h" id="svc7">General Supply</h3>
+            <div class="svc-sub">Institutional Procurement Support</div>
+            <p class="svc-body">General supply services supporting the broader institutional procurement requirements — stationery, cleaning, office and facility management supplies — within documented operational scope.</p>
+            <ul class="svc-bullets" style="display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;">
+              <li>Office &amp; facility supplies</li>
+              <li>Stationery &amp; admin materials</li>
+              <li>Cleaning &amp; sanitation products</li>
+              <li>Institutional bulk procurement</li>
+            </ul>
+          </article>
+
+          <!-- 08 Food Supply -->
+          <article class="svc-card reveal reveal-1" aria-labelledby="svc8">
+            <div class="svc-num">08</div>
+            <div class="svc-ico" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 8h1a4 4 0 0 1 0 8h-1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8Z" stroke="currentColor" stroke-width="1.7"/><path d="M6 1v3M10 1v3M14 1v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="svc-h" id="svc8">General &amp; Food Supply</h3>
+            <div class="svc-sub">Sindh Food Authority Licensed</div>
+            <p class="svc-body">Food supply support within the scope of Sindh Food Authority licensing — for institutional dining, patient nutrition, and facility catering needs.</p>
+            <ul class="svc-bullets">
+              <li>Sindh Food Authority licensed</li>
+              <li>Institutional catering supply</li>
+              <li>Patient nutrition support</li>
+            </ul>
+            <div class="svc-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>SFA Licensed</div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════ PROCESS / WORKFLOW SECTION ══════ -->
+    <section class="section process-section" aria-labelledby="process-h">
+      <div class="container">
+        <div class="process-header reveal">
+          <div class="s-label">How we work</div>
+          <h2 class="s-title" id="process-h">Our procurement workflow</h2>
+          <p class="s-sub">A four-step structured process ensures every supply engagement is documented, verified, and executed reliably.</p>
+        </div>
+
+        <div class="process-track" role="list">
+
+          <div class="process-step reveal" role="listitem">
+            <div class="step-node-wrap">
+              <div class="step-node" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" stroke="currentColor" stroke-width="1.8"/><path d="M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2 2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <div class="step-num" aria-label="Step 1">1</div>
+            </div>
+            <div>
+              <div class="step-h">Requirement Analysis</div>
+              <p class="step-body">Institutional procurement needs are documented — item specifications, quantities, delivery location, and timeline are captured and reviewed.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal reveal-1" role="listitem">
+            <div class="step-node-wrap">
+              <div class="step-node" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
+              </div>
+              <div class="step-num" aria-label="Step 2">2</div>
+            </div>
+            <div>
+              <div class="step-h">Sourcing &amp; Verification</div>
+              <p class="step-body">Items are sourced through verified, licensed supplier channels — with quality checks and batch documentation prepared for institutional review.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal reveal-2" role="listitem">
+            <div class="step-node-wrap">
+              <div class="step-node" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.8"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <div class="step-num" aria-label="Step 3">3</div>
+            </div>
+            <div>
+              <div class="step-h">Documentation &amp; Compliance</div>
+              <p class="step-body">All supply documentation is prepared — invoices, delivery notes, certificates, and compliance records — aligned to procurement office requirements.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal reveal-3" role="listitem">
+            <div class="step-node-wrap">
+              <div class="step-node" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 7h13v10H3V7Z" stroke="currentColor" stroke-width="1.8"/><path d="M16 10h3l2 2v5h-5v-7Z" stroke="currentColor" stroke-width="1.8"/><circle cx="7" cy="19" r="1.5" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="19" r="1.5" stroke="currentColor" stroke-width="1.8"/></svg>
+              </div>
+              <div class="step-num" aria-label="Step 4">4</div>
+            </div>
+            <div>
+              <div class="step-h">Delivery &amp; After-Sales</div>
+              <p class="step-body">Structured delivery to the institutional location with delivery confirmation, follow-up support, and recurring supply coordination as required.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════ SERVICE DETAIL BLOCKS ══════ -->
+    <section class="section details-section" aria-labelledby="details-h">
+      <div class="container">
+        <div class="reveal" style="max-width:560px; margin-bottom:72px;">
+          <div class="s-label">Service Detail</div>
+          <h2 class="s-title" id="details-h">Core capabilities in depth</h2>
+          <p class="s-sub">A closer look at our two flagship service lines — pharmaceutical supply and medical devices — that anchor our institutional operations.</p>
+        </div>
+
+        <!-- Block 1: Pharma -->
+        <div class="detail-block">
+          <div class="detail-text reveal">
+            <div class="s-label">Service Line 01</div>
+            <h3 class="detail-h">Pharmaceutical Supply &amp; Distribution</h3>
+            <p class="detail-body">Our pharmaceutical supply pathway is built on a Drug Wholesale License and structured supplier relationships — enabling reliable, documented supply for government and private institutional buyers across Sindh.</p>
+            <div class="detail-points">
+              <div class="detail-point">
+                <div class="detail-point-ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div>
+                <div class="detail-point-text"><div class="detail-point-h">Licensed wholesale operations</div><div class="detail-point-sub">Drug wholesale license active through 07-Feb-2028, enabling institutional pharmaceutical supply.</div></div>
+              </div>
+              <div class="detail-point">
+                <div class="detail-point-ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div>
+                <div class="detail-point-text"><div class="detail-point-h">Government formulary alignment</div><div class="detail-point-sub">Supply structured around government hospital formulary lists and procurement specifications.</div></div>
+              </div>
+              <div class="detail-point">
+                <div class="detail-point-ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div>
+                <div class="detail-point-text"><div class="detail-point-h">Full batch documentation</div><div class="detail-point-sub">Every order includes batch records, expiry documentation, and invoice packages for procurement offices.</div></div>
+              </div>
+            </div>
+            <a class="btn-primary" href="contact.html">Pharmaceutical Inquiry</a>
+          </div>
+          <div class="detail-visual reveal reveal-1">
+            <div class="detail-visual-orb" aria-hidden="true"></div>
+            <div class="visual-title">Pharma supply scope</div>
+            <ul class="visual-list" aria-label="Pharmaceutical supply items">
+              <li class="visual-item"><span class="visual-dot"></span>Essential medicines &amp; formulations</li>
+              <li class="visual-item"><span class="visual-dot"></span>OTC &amp; prescription pharmaceuticals</li>
+              <li class="visual-item"><span class="visual-dot"></span>IV fluids &amp; infusion products</li>
+              <li class="visual-item"><span class="visual-dot"></span>Vitamins, supplements &amp; nutraceuticals</li>
+              <li class="visual-item"><span class="visual-dot"></span>Cold-chain &amp; temperature-sensitive items</li>
+              <li class="visual-item"><span class="visual-dot"></span>Government formulary specific items</li>
+            </ul>
+            <div class="visual-cert-strip">
+              <span class="visual-cert"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>Drug Wholesale License</span>
+              <span class="visual-cert"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>ISO 9001:2015</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 2: Medical Devices (reverse) -->
+        <div class="detail-block reverse">
+          <div class="detail-text reveal">
+            <div class="s-label">Service Line 02</div>
+            <h3 class="detail-h">Medical Devices &amp; Equipment Procurement</h3>
+            <p class="detail-body">ISO 13485:2016 certified procurement support for institutional medical devices and equipment — from diagnostic instruments to ward equipment, sourced through verified channels with compliance documentation.</p>
+            <div class="detail-points">
+              <div class="detail-point">
+                <div class="detail-point-ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div>
+                <div class="detail-point-text"><div class="detail-point-h">ISO 13485:2016 Medical Devices QMS</div><div class="detail-point-sub">Our quality management system is certified to the international standard for medical device supply.</div></div>
+              </div>
+              <div class="detail-point">
+                <div class="detail-point-ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div>
+                <div class="detail-point-text"><div class="detail-point-h">Verified supplier network</div><div class="detail-point-sub">Equipment sourced through established national and international supplier relationships built over 20+ years.</div></div>
+              </div>
+              <div class="detail-point">
+                <div class="detail-point-ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div>
+                <div class="detail-point-text"><div class="detail-point-h">Institutional specification alignment</div><div class="detail-point-sub">Equipment specifications matched to institutional requirements and clinical environment parameters.</div></div>
+              </div>
+            </div>
+            <a class="btn-primary" href="contact.html">Equipment Inquiry</a>
+          </div>
+          <div class="detail-visual reveal reveal-1">
+            <div class="detail-visual-orb" aria-hidden="true"></div>
+            <div class="visual-title">Equipment categories</div>
+            <ul class="visual-list" aria-label="Medical equipment categories">
+              <li class="visual-item"><span class="visual-dot navy"></span>Patient monitoring systems</li>
+              <li class="visual-item"><span class="visual-dot navy"></span>Diagnostic &amp; imaging equipment</li>
+              <li class="visual-item"><span class="visual-dot navy"></span>Laboratory instruments</li>
+              <li class="visual-item"><span class="visual-dot navy"></span>Surgical theatre equipment</li>
+              <li class="visual-item"><span class="visual-dot navy"></span>Sterilisation &amp; autoclave units</li>
+              <li class="visual-item"><span class="visual-dot navy"></span>Dental &amp; ophthalmic equipment</li>
+            </ul>
+            <div class="visual-cert-strip">
+              <span class="visual-cert"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>ISO 13485:2016</span>
+              <span class="visual-cert"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>PEC Licensed</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════ WHY CHOOSE OUR SERVICES ══════ -->
+    <section class="section why-section" aria-labelledby="why-h">
+      <div class="container">
+        <div class="why-header reveal">
+          <div class="s-label">Differentiators</div>
+          <h2 class="s-title" id="why-h">Why choose our service model</h2>
+          <p class="s-sub">Six pillars that define how we serve institutional procurement — built around trust, compliance, and operational clarity.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="why-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" stroke="currentColor" stroke-width="2"/><path d="M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2 2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2Z" stroke="currentColor" stroke-width="2"/><path d="M9 12h6M9 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="why-h">Documentation-First</div>
+            <div class="why-body">Every engagement is backed by proper documentation — from initial inquiry to delivery, ensuring procurement offices have the records they need.</div>
+          </div>
+          <div class="why-card reveal reveal-1">
+            <div class="why-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div class="why-h">Full Regulatory Compliance</div>
+            <div class="why-body">Drug licensed, ISO certified, FBR registered, Sindh Food Authority approved — all licenses current and verifiable through our Certificates page.</div>
+          </div>
+          <div class="why-card reveal reveal-2">
+            <div class="why-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="why-h">Dual-Sector Experience</div>
+            <div class="why-body">20+ years serving both government institutions and private sector buyers — with dedicated procurement pathways for each sector.</div>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="2"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="why-h">Verified Supplier Network</div>
+            <div class="why-body">Products sourced through established national and international supplier relationships, built and maintained over two decades of institutional operations.</div>
+          </div>
+          <div class="why-card reveal reveal-1">
+            <div class="why-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="why-h">Structured Execution</div>
+            <div class="why-body">A defined four-step workflow — analysis, sourcing, documentation, delivery — ensures consistent, predictable supply execution for every order.</div>
+          </div>
+          <div class="why-card reveal reveal-2">
+            <div class="why-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div class="why-h">Province-Wide Reach</div>
+            <div class="why-body">Active supply relationships across Karachi and all of Sindh — from metropolitan hospitals to district health offices and taluka hospitals.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════ CLOSING CTA ══════ -->
+    <section class="section cta-section" aria-labelledby="cta-h">
+      <div class="container">
+        <div class="cta-card reveal">
+          <div class="cta-orb-a" aria-hidden="true"></div>
+          <div class="cta-orb-b" aria-hidden="true"></div>
+          <div class="cta-inner">
+            <div class="s-label" style="justify-content:center;">Start a supply engagement</div>
+            <h2 class="cta-h" id="cta-h">Government &amp; Private Institutions are welcome</h2>
+            <p class="cta-sub">Hospitals, clinics, laboratories, NGOs, corporates and institutions can contact us for supply inquiries with full documentation and compliance support.</p>
+            <div class="cta-btns">
+              <a class="btn-primary" href="contact.html">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="2"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="2"/></svg>
+                Private Institutions — Contact Us
+              </a>
+              <a class="btn-ghost" href="contact.html">Corporate Medical Supply Inquiries</a>
+            </div>
+            <div class="cta-note">Documented · Compliant · Trusted since 2004</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">© 2025 Haq Enterprises. All rights reserved.</div>
+        <div class="footer-copy">Built for trust, compliance, and enterprise procurement.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    "use strict";
+
+    /* ── Scroll reveal ── */
+    var revealEls = Array.from(document.querySelectorAll(".reveal"));
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
+      }, { threshold: 0.08, rootMargin: "0px 0px -32px 0px" });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add("visible"); });
+    }
+
+    /* ── Animated counters ── */
+    var counters = Array.from(document.querySelectorAll(".count-up"));
+    function animateCounter(el) {
+      var target = parseInt(el.getAttribute("data-target"), 10);
+      var dur = 1600; var start = performance.now();
+      (function tick(now) {
+        var p = Math.min((now - start) / dur, 1);
+        var ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(ease * target);
+        if (p < 1) requestAnimationFrame(tick); else el.textContent = target;
+      })(start);
+    }
+    if ("IntersectionObserver" in window) {
+      var cio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { animateCounter(e.target); cio.unobserve(e.target); } });
+      }, { threshold: 0.4 });
+      counters.forEach(function (c) { cio.observe(c); });
+    } else { counters.forEach(function (c) { c.textContent = c.getAttribute("data-target"); }); }
+
+  })();
+  </script>
+
+</body>
+</html>

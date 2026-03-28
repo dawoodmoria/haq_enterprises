@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#001122"/>
+  <title>Haq Enterprises — Institutional Medical, Pharmaceutical &amp; General Supplier · Karachi</title>
+  <meta name="description" content="Haq Enterprises is a documentation-led institutional supplier for government and private hospitals, clinics, NGOs, and procurement departments across Karachi and Sindh. ISO 9001:2015 certified."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="index.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Haq Enterprises — Institutional Medical &amp; Pharmaceutical Supplier"/>
+  <meta property="og:description" content="Documentation-led institutional supply partner for government and private hospitals, clinics, laboratories, NGOs, and procurement departments."/>
+  <meta property="og:site_name" content="Haq Enterprises"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":["Organization","LocalBusiness","MedicalBusiness"],"name":"Haq Enterprises","url":"index.html","logo":"assets/images/logo.png","description":"Institutional medical, pharmaceutical and general supplier based in Karachi.","address":{"@type":"PostalAddress","streetAddress":"Bungalow 235-C, PECHS Block-2","addressLocality":"Karachi","addressRegion":"Sindh","addressCountry":"PK"},"areaServed":"Pakistan"}]}
+  </script>
+
+  <style>
+    /* ═══════════════════════════════════════════════════════
+       HAQ ENTERPRISES — HOMEPAGE DESIGN SYSTEM
+       Aesthetic: Dark Institutional Luxury
+       Fonts: Cormorant Garamond (display) + Outfit (body) + DM Mono
+    ═══════════════════════════════════════════════════════ */
+
+    :root {
+      --ink:        #040810;
+      --ink-2:      #090e1a;
+      --ink-3:      #0f1828;
+      --navy:       #001F3F;
+      --navy-2:     #002a56;
+      --navy-3:     #003470;
+      --forest:     #012a1a;
+      --forest-2:   #013d26;
+      --forest-3:   #016040;
+      --platinum:   #e0e6ed;
+      --platinum-2: #c8d2de;
+      --gold:       #c9a84c;
+      --gold-2:     #e2c26a;
+      --gold-light: #f5e6b8;
+      --white:      #ffffff;
+      --glass:      rgba(255,255,255,0.045);
+      --glass-2:    rgba(255,255,255,0.08);
+      --glass-border: rgba(255,255,255,0.10);
+      --glass-border-2: rgba(255,255,255,0.16);
+      --ease:       cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--ink);
+      color: var(--platinum);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--ink-2); }
+    ::-webkit-scrollbar-thumb { background: var(--navy-3); border-radius: 3px; }
+    ::selection { background: rgba(201,168,76,0.25); color: var(--white); }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
+
+    /* ═══ LAYOUT ═══ */
+    .container { max-width: 1260px; margin: 0 auto; padding: 0 40px; }
+    .section { padding: 110px 0; }
+    .section-sm { padding: 72px 0; }
+    @media (max-width:768px) { .container { padding: 0 20px; } .section { padding: 72px 0; } .section-sm { padding: 48px 0; } }
+
+    /* ═══ TOP BAR ═══ */
+    .topbar {
+      background: rgba(4,8,16,0.95);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 10px 0;
+    }
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 12px; }
+    .topbar-live {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34,197,94,0.6);
+      animation: pulse-live 2s ease-in-out infinite;
+    }
+    @keyframes pulse-live { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .topbar-text { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.55); }
+    .topbar-link { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.45); transition: color .2s; }
+    .topbar-link:hover { color: var(--gold-2); }
+    .topbar-sep { width: 1px; height: 12px; background: rgba(255,255,255,0.12); }
+    .topbar-right { display: flex; align-items: center; gap: 20px; }
+    @media (max-width:900px) { .topbar { display: none; } }
+
+    /* ═══ NAVIGATION ═══ */
+    .nav {
+      position: sticky; top: 0; z-index: 999;
+      background: rgba(4,8,16,0.88);
+      backdrop-filter: blur(20px) saturate(160%);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 0;
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .nav-brand-mark {
+      width: 40px; height: 40px; border-radius: 10px; flex: 0 0 auto;
+      background: linear-gradient(135deg, var(--navy-3), var(--forest-2));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 700; color: var(--gold-light);
+      border: 1px solid rgba(201,168,76,0.25);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+    .nav-brand-name { font-size: 15px; font-weight: 700; color: var(--white); line-height: 1; }
+    .nav-brand-sub { font-size: 10px; font-weight: 400; color: rgba(255,255,255,0.38); letter-spacing: 0.05em; margin-top: 3px; }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a { padding: 8px 13px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.55); transition: color .2s, background .2s; }
+    .nav-links a:hover { color: var(--white); background: var(--glass); }
+    .nav-links a.active { color: var(--white); background: var(--glass-2); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 18px; border-radius: 9px;
+      background: linear-gradient(135deg, var(--forest-2), var(--navy-2));
+      color: var(--white); font-size: 13px; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.13);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+      transition: transform .2s var(--ease), box-shadow .2s;
+    }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.45); color: var(--white); }
+    .nav-toggle { display: none; background: none; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 8px 10px; cursor: pointer; color: var(--platinum); }
+    @media (max-width:900px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-toggle { display: flex; align-items: center; }
+    }
+
+    /* ═══ HERO ═══ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 100px 0 80px;
+      overflow: hidden;
+    }
+
+    /* Multi-layer atmospheric background */
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 100% 70% at 50% -5%, rgba(0,52,112,0.75), transparent 55%),
+        radial-gradient(ellipse 70% 50% at 5% 85%, rgba(1,61,38,0.55), transparent 55%),
+        radial-gradient(ellipse 55% 45% at 95% 75%, rgba(0,32,63,0.6), transparent 55%),
+        radial-gradient(ellipse 40% 35% at 80% 10%, rgba(1,96,64,0.25), transparent 55%),
+        linear-gradient(180deg, #050a14 0%, #040810 45%, #060d10 100%);
+    }
+
+    /* Fine grid */
+    .hero-grid {
+      position: absolute; inset: 0; z-index: 1;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 75%);
+    }
+
+    /* Noise grain */
+    .hero-noise {
+      position: absolute; inset: 0; z-index: 2;
+      opacity: 0.028;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      pointer-events: none;
+    }
+
+    /* Atmospheric orbs */
+    .orb { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; z-index: 1; }
+    .orb-a { width: 700px; height: 700px; top: -200px; left: -150px; background: radial-gradient(circle, rgba(0,52,112,0.38), transparent 65%); animation: driftA 22s ease-in-out infinite alternate; }
+    .orb-b { width: 550px; height: 550px; bottom: -80px; right: -100px; background: radial-gradient(circle, rgba(1,61,38,0.32), transparent 65%); animation: driftB 28s ease-in-out infinite alternate; }
+    .orb-c { width: 350px; height: 350px; top: 35%; left: 55%; background: radial-gradient(circle, rgba(201,168,76,0.06), transparent 65%); animation: pulse-orb 9s ease-in-out infinite; }
+    @keyframes driftA { from{transform:translate(0,0)} to{transform:translate(50px,35px)} }
+    @keyframes driftB { from{transform:translate(0,0)} to{transform:translate(-40px,25px)} }
+    @keyframes pulse-orb { 0%,100%{transform:scale(1);opacity:.5} 50%{transform:scale(1.2);opacity:1} }
+
+    /* Medical cross elements */
+    .med-x { position: absolute; z-index: 2; pointer-events: none; opacity: 0; animation: medFloat 14s ease-in-out infinite; }
+    .med-x svg { opacity: 0.07; }
+    .med-x:nth-child(1) { top: 18%; left: 6%; animation-duration: 13s; animation-delay: 0s; }
+    .med-x:nth-child(2) { top: 72%; left: 4%; animation-duration: 17s; animation-delay: 2s; }
+    .med-x:nth-child(3) { top: 14%; right: 8%; animation-duration: 15s; animation-delay: 1s; }
+    .med-x:nth-child(4) { top: 78%; right: 6%; animation-duration: 12s; animation-delay: 4s; }
+    .med-x:nth-child(5) { top: 44%; left: 2%; animation-duration: 19s; animation-delay: 3s; }
+    .med-x:nth-child(6) { top: 30%; right: 3%; animation-duration: 16s; animation-delay: 6s; }
+    @keyframes medFloat {
+      0%,100% { opacity:0; transform: translateY(0) rotate(0deg); }
+      10%,90% { opacity:1; }
+      50% { transform: translateY(-18px) rotate(8deg); }
+    }
+
+    .hero-inner { position: relative; z-index: 3; width: 100%; }
+
+    /* Eyebrow */
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 7px 16px; border-radius: 999px;
+      border: 1px solid rgba(201,168,76,0.28);
+      background: rgba(201,168,76,0.07);
+      font-size: 11px; font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.13em; text-transform: uppercase;
+      margin-bottom: 28px;
+      animation: slideUp 0.9s var(--ease-out) both;
+    }
+    .eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); animation: pulse-live 2s ease-in-out infinite; }
+
+    /* Main headline */
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(48px, 7.5vw, 96px);
+      font-weight: 600; line-height: 1.0;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 28px;
+      animation: slideUp 0.9s var(--ease-out) 0.1s both;
+    }
+    .hero-h1 em {
+      font-style: italic;
+      background: linear-gradient(130deg, var(--gold-light) 0%, var(--gold) 50%, #d4a83a 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* Sub */
+    .hero-sub {
+      font-size: clamp(15px, 2vw, 18px);
+      font-weight: 300; line-height: 1.75;
+      color: rgba(255,255,255,0.5);
+      max-width: 580px;
+      margin-bottom: 44px;
+      animation: slideUp 0.9s var(--ease-out) 0.2s both;
+    }
+
+    /* CTA row */
+    .hero-btns {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      margin-bottom: 52px;
+      animation: slideUp 0.9s var(--ease-out) 0.3s both;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 26px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--forest-2), var(--navy-2));
+      color: var(--white); font-family: 'Outfit', sans-serif;
+      font-size: 14px; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+      transition: transform .25s var(--ease), box-shadow .25s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 60px rgba(1,61,38,0.3); color: var(--white); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 26px; border-radius: 10px;
+      background: var(--glass); border: 1px solid var(--glass-border);
+      color: rgba(255,255,255,0.7); font-family: 'Outfit', sans-serif;
+      font-size: 14px; font-weight: 600;
+      transition: color .2s, background .2s, transform .2s;
+    }
+    .btn-ghost:hover { color: var(--white); background: var(--glass-2); transform: translateY(-2px); }
+
+    /* Trust badge row */
+    .hero-trust {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      animation: slideUp 0.9s var(--ease-out) 0.4s both;
+    }
+    .trust-chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 14px; border-radius: 999px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10);
+      font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.6);
+    }
+    .trust-chip svg { color: var(--gold); flex: 0 0 auto; }
+
+    /* Right card */
+    .hero-card {
+      background: rgba(10,18,32,0.7);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 24px;
+      backdrop-filter: blur(24px);
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+      animation: slideUp 0.9s var(--ease-out) 0.25s both;
+      position: relative;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent);
+    }
+    .hero-card-head {
+      padding: 24px 28px 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      background: linear-gradient(135deg, rgba(0,52,112,0.2), rgba(1,61,38,0.12), transparent);
+    }
+    .hero-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; font-weight: 600;
+      color: var(--white); margin-bottom: 6px;
+    }
+    .hero-card-sub { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.4); }
+    .hero-card-body { padding: 20px 28px 24px; }
+
+    .procurement-row {
+      display: flex; gap: 10px; margin-bottom: 18px;
+    }
+    .proc-btn {
+      flex: 1; padding: 12px 14px; border-radius: 10px;
+      text-align: center; font-size: 13px; font-weight: 600;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .proc-btn:hover { transform: translateY(-1px); }
+    .proc-btn-a {
+      background: linear-gradient(135deg, var(--forest-2), var(--navy-2));
+      color: var(--white); border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    }
+    .proc-btn-a:hover { color: var(--white); box-shadow: 0 10px 30px rgba(0,0,0,0.45); }
+    .proc-btn-b {
+      background: var(--glass); border: 1px solid var(--glass-border);
+      color: rgba(255,255,255,0.7);
+    }
+    .proc-btn-b:hover { color: var(--white); }
+
+    .hero-note {
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px; padding: 12px 14px;
+      font-size: 12px; font-weight: 400; line-height: 1.6;
+      color: rgba(255,255,255,0.4); margin-bottom: 18px;
+    }
+
+    .compliance-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .comp-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 12px; border-radius: 999px;
+      font-size: 11px; font-weight: 600;
+    }
+    .comp-chip.green { background: rgba(1,96,64,0.15); border: 1px solid rgba(1,96,64,0.28); color: #4ade80; }
+    .comp-chip.navy { background: rgba(0,52,112,0.18); border: 1px solid rgba(0,52,112,0.30); color: #93c5fd; }
+
+    /* Stat strip under hero */
+    .hero-stats-strip {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(10px);
+      animation: slideUp 0.9s var(--ease-out) 0.5s both;
+    }
+    .hstat {
+      padding: 28px 24px; text-align: center;
+      border-right: 1px solid var(--glass-border);
+    }
+    .hstat:last-child { border-right: none; }
+    .hstat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px; font-weight: 700;
+      color: var(--white); line-height: 1; letter-spacing: -0.03em;
+    }
+    .hstat-num span { color: var(--gold); }
+    .hstat-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.38); letter-spacing: 0.09em; text-transform: uppercase; margin-top: 8px; }
+    @media (max-width:640px) {
+      .hero-stats-strip { grid-template-columns: repeat(2,1fr); }
+      .hstat:nth-child(2) { border-right: none; }
+      .hstat:nth-child(1), .hstat:nth-child(2) { border-bottom: 1px solid var(--glass-border); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero two-column layout */
+    .hero-cols { display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; }
+    @media (max-width: 1100px) { .hero-cols { grid-template-columns: 1fr; } .hero-card { max-width: 520px; } }
+
+    /* ═══ SECTION LABELS ═══ */
+    .s-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .s-label::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+
+    .s-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(34px, 4.5vw, 54px);
+      font-weight: 600; line-height: 1.07;
+      letter-spacing: -0.02em; color: var(--white);
+      margin-bottom: 16px;
+    }
+    .s-sub { font-size: 16px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.42); }
+
+    /* ═══ METRICS SECTION ═══ */
+    .metrics-section {
+      background: linear-gradient(180deg, var(--ink) 0%, #070c1a 50%, var(--ink) 100%);
+      border-top: 1px solid rgba(255,255,255,0.055);
+      border-bottom: 1px solid rgba(255,255,255,0.055);
+    }
+
+    .metrics-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border); border-radius: 24px; overflow: hidden; }
+    @media (max-width:768px) { .metrics-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width:420px) { .metrics-grid { grid-template-columns: 1fr; } }
+
+    .metric-block {
+      padding: 48px 36px;
+      background: rgba(4,8,16,0.85);
+      position: relative;
+      transition: background .3s;
+    }
+    .metric-block:hover { background: rgba(9,14,26,0.95); }
+    .metric-block::after { content:''; position:absolute; bottom:0; left:32px; right:32px; height:1px; background:linear-gradient(90deg,transparent,rgba(201,168,76,0.4),transparent); opacity:0; transition:opacity .3s; }
+    .metric-block:hover::after { opacity:1; }
+
+    .metric-ico {
+      width: 46px; height: 46px; border-radius: 13px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--glass); border: 1px solid var(--glass-border);
+      color: var(--gold-light); margin-bottom: 22px;
+    }
+    .metric-n {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px; font-weight: 700;
+      color: var(--white); line-height: 1; letter-spacing: -0.03em;
+    }
+    .metric-n .plus { color: var(--gold); }
+    .metric-lbl { font-size: 12px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 10px; }
+    .metric-desc { font-size: 13px; font-weight: 300; line-height: 1.6; color: rgba(255,255,255,0.27); margin-top: 8px; }
+
+    /* ═══ SERVICES SECTION ═══ */
+    .services-section { background: var(--ink); }
+
+    .services-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 56px; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    @media (max-width:900px) { .services-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width:560px) { .services-grid { grid-template-columns: 1fr; } }
+
+    .svc-card {
+      background: rgba(9,14,26,0.7);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px; padding: 30px 26px;
+      position: relative; overflow: hidden;
+      transition: transform .3s var(--ease), box-shadow .3s, border-color .3s;
+    }
+    .svc-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
+      opacity: 0; transition: opacity .3s;
+    }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: 0 28px 70px rgba(0,0,0,0.55), 0 0 60px rgba(0,52,112,0.2); border-color: rgba(201,168,76,0.18); }
+    .svc-card:hover::before { opacity: 1; }
+
+    /* Sweep effect */
+    .svc-card::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(110deg, transparent 45%, rgba(255,255,255,0.018) 50%, transparent 55%);
+      opacity: 0; pointer-events: none; transition: opacity .3s;
+    }
+    .svc-card:hover::after { opacity: 1; }
+
+    .svc-ico {
+      width: 50px; height: 50px; border-radius: 14px; margin-bottom: 20px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(0,52,112,0.4), rgba(1,61,38,0.3));
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--gold-light);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+      transition: box-shadow .3s;
+    }
+    .svc-card:hover .svc-ico { box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 20px rgba(201,168,76,0.15); }
+    .svc-h { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 8px; line-height: 1.2; }
+    .svc-sub { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.28); letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 12px; }
+    .svc-body { font-size: 13.5px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.45); }
+
+    /* ═══ COMPLIANCE / TRUST SECTION ═══ */
+    .compliance-section {
+      background: linear-gradient(180deg, var(--ink) 0%, #07101a 100%);
+      border-top: 1px solid rgba(255,255,255,0.055);
+    }
+
+    .compliance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    @media (max-width:900px) { .compliance-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+    .cert-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .cert-item {
+      display: flex; align-items: center; gap: 16px;
+      padding: 16px 20px; border-radius: 14px;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+      transition: background .2s, border-color .2s;
+    }
+    .cert-item:hover { background: rgba(255,255,255,0.055); border-color: rgba(201,168,76,0.2); }
+    .cert-check {
+      width: 32px; height: 32px; border-radius: 10px; flex: 0 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(1,96,64,0.15); border: 1px solid rgba(1,96,64,0.25);
+      color: #4ade80;
+    }
+    .cert-name { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); }
+    .cert-validity { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.35); margin-top: 2px; font-family: 'DM Mono', monospace; }
+
+    /* ═══ CEO SECTION ═══ */
+    .ceo-section { background: var(--ink); }
+    .ceo-grid { display: grid; grid-template-columns: 340px 1fr; gap: 72px; align-items: center; }
+    @media (max-width:900px) { .ceo-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+    .ceo-portrait {
+      position: relative;
+    }
+    .ceo-portrait img {
+      width: 100%; border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+      filter: brightness(0.92) contrast(1.04);
+    }
+    .ceo-portrait::before {
+      content: '';
+      position: absolute; inset: -1px; border-radius: 25px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.3), transparent 50%, rgba(0,52,112,0.2));
+      z-index: -1;
+    }
+    .ceo-portrait-card {
+      position: absolute; bottom: -20px; right: -20px;
+      background: rgba(9,14,26,0.92); border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(16px); border-radius: 14px; padding: 14px 18px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+    }
+    .ceo-card-val { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: var(--white); line-height: 1; }
+    .ceo-card-lbl { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.38); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+    @media (max-width:900px) { .ceo-portrait-card { bottom: 16px; right: 16px; } }
+
+    .ceo-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px,4vw,52px); font-weight: 600; color: var(--white); letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 8px; }
+    .ceo-role { font-size: 14px; font-weight: 600; color: var(--gold-2); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 24px; }
+    .ceo-body { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+
+    /* ═══ WHY CHOOSE US ═══ */
+    .why-section {
+      background: linear-gradient(180deg, var(--ink) 0%, #07101a 100%);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 60px; }
+    @media (max-width:900px) { .why-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width:560px) { .why-grid { grid-template-columns: 1fr; } }
+
+    .why-card {
+      padding: 32px 28px;
+      background: rgba(9,14,26,0.65); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px;
+      transition: transform .3s var(--ease), border-color .3s, box-shadow .3s;
+    }
+    .why-card:hover { transform: translateY(-3px); border-color: rgba(201,168,76,0.2); box-shadow: 0 24px 60px rgba(0,0,0,0.45); }
+    .why-ico {
+      width: 48px; height: 48px; border-radius: 13px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--glass); border: 1px solid var(--glass-border);
+      color: var(--gold-light); margin-bottom: 20px;
+    }
+    .why-h { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 10px; }
+    .why-body { font-size: 13.5px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.42); }
+
+    /* ═══ CLIENTS PREVIEW ═══ */
+    .clients-section { background: var(--ink); }
+
+    .clients-preview { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 52px; }
+
+    .abbr-wall {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 2px;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px; overflow: hidden;
+      background: rgba(255,255,255,0.035);
+    }
+    @media (max-width:900px) { .abbr-wall { grid-template-columns: repeat(3,1fr); } }
+    @media (max-width:500px) { .abbr-wall { grid-template-columns: repeat(2,1fr); } }
+
+    .abbr-cell {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+      padding: 26px 16px; background: rgba(4,8,16,0.85);
+      text-align: center; transition: background .25s;
+    }
+    .abbr-cell:hover { background: rgba(12,20,36,0.95); }
+    .abbr-code {
+      font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500;
+      color: rgba(255,255,255,0.18); transition: color .25s;
+    }
+    .abbr-cell:hover .abbr-code { color: var(--gold-2); }
+    .abbr-name { font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.22); line-height: 1.4; transition: color .25s; }
+    .abbr-cell:hover .abbr-name { color: rgba(255,255,255,0.6); }
+
+    /* ═══ CTA SECTION ═══ */
+    .cta-section { background: var(--ink); }
+    .cta-card {
+      position: relative; overflow: hidden;
+      border-radius: 28px; border: 1px solid rgba(255,255,255,0.1);
+      padding: 80px 64px;
+      background: linear-gradient(135deg, rgba(0,52,112,0.5) 0%, rgba(1,61,38,0.38) 50%, rgba(4,8,16,0.9) 100%);
+    }
+    .cta-card::before { content:''; position:absolute; top:-1px; left:8%; right:8%; height:1px; background:linear-gradient(90deg,transparent,rgba(201,168,76,0.55),transparent); }
+    .cta-orb { position:absolute; width:500px; height:500px; right:-150px; top:-150px; border-radius:50%; background:radial-gradient(circle,rgba(0,52,112,0.28),transparent 65%); filter:blur(60px); pointer-events:none; }
+
+    .cta-inner { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; gap:48px; flex-wrap:wrap; }
+    .cta-h { font-family:'Cormorant Garamond',serif; font-size:clamp(30px,4vw,48px); font-weight:600; color:var(--white); letter-spacing:-0.02em; margin-bottom:14px; line-height:1.1; }
+    .cta-sub { font-size:15px; font-weight:300; line-height:1.75; color:rgba(255,255,255,0.48); max-width:480px; }
+    .cta-btns { display:flex; flex-direction:column; gap:12px; min-width:220px; }
+    .cta-note { font-size:11px; font-weight:600; text-align:center; color:rgba(255,255,255,0.28); letter-spacing:0.09em; text-transform:uppercase; }
+
+    @media (max-width:768px) { .cta-card { padding: 48px 28px; } }
+
+    /* ═══ FOOTER ═══ */
+    .footer {
+      background: var(--ink-2);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 60px 0 32px;
+    }
+    .footer-top { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; margin-bottom: 52px; }
+    @media (max-width:768px) { .footer-top { grid-template-columns: 1fr; gap: 40px; } }
+
+    .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .footer-brand-mark { width: 38px; height: 38px; border-radius: 9px; background: linear-gradient(135deg,var(--navy-3),var(--forest-2)); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:700; color:var(--gold-light); border:1px solid rgba(201,168,76,0.2); }
+    .footer-brand-name { font-size: 15px; font-weight: 700; color: var(--white); }
+    .footer-brand-sub { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 2px; }
+    .footer-desc { font-size: 13px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.35); margin-bottom: 16px; }
+    .footer-addr { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.28); font-family: 'DM Mono', monospace; line-height: 1.6; }
+
+    .footer-links { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
+    @media (max-width:560px) { .footer-links { grid-template-columns: repeat(2,1fr); } }
+    .footer-col-h { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 16px; }
+    .footer-link { display: block; font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.48); margin-bottom: 10px; transition: color .2s; }
+    .footer-link:hover { color: var(--gold-2); }
+
+    .footer-hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin-bottom: 24px; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+
+    /* Certification strip */
+    .cert-strip { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+    .cert-tag { display:inline-flex; align-items:center; gap:5px; padding:5px 10px; border-radius:999px; background:rgba(1,96,64,0.12); border:1px solid rgba(1,96,64,0.22); font-size:10px; font-weight:600; color:#4ade80; }
+
+    /* ═══ SCROLL REVEAL ═══ */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-1 { transition-delay: .10s; }
+    .reveal-2 { transition-delay: .20s; }
+    .reveal-3 { transition-delay: .30s; }
+    .reveal-4 { transition-delay: .40s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <div class="topbar-left">
+          <div class="topbar-live" aria-hidden="true"></div>
+          <span class="topbar-text">Karachi, Pakistan</span>
+          <div class="topbar-sep" aria-hidden="true"></div>
+          <a class="topbar-link" href="contact.html">Private Institutions — Contact Us</a>
+        </div>
+        <div class="topbar-right">
+          <a class="topbar-link" href="certificates.html">Certificates &amp; Licenses</a>
+          <a class="topbar-link" href="contact.html">Corporate Medical Supply Inquiries</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand" aria-label="Haq Enterprises Home">
+          <img src="assets/images/logo.png" alt="Haq Enterprises mark" width="44" height="44" loading="eager" style="border-radius:10px;">
+          <div>
+            <div class="nav-brand-name">Haq Enterprises</div>
+            <div class="nav-brand-sub">Medical · Pharmaceutical · General Supplies</div>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="suppliers.html">Suppliers</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+        </ul>
+        <a href="contact.html" class="nav-cta">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="2"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="2"/></svg>
+          Contact
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <a class="visually-hidden" href="#main" style="position:absolute;left:-9999px;">Skip to content</a>
+
+  <main id="main">
+
+    <!-- ═══════ HERO ═══════ -->
+    <header class="hero" aria-label="Hero section">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-noise" aria-hidden="true"></div>
+
+      <div class="orb orb-a" aria-hidden="true"></div>
+      <div class="orb orb-b" aria-hidden="true"></div>
+      <div class="orb orb-c" aria-hidden="true"></div>
+
+      <!-- Medical cross floats -->
+      <div class="med-x" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="10" y="0" width="8" height="28" rx="2" fill="white"/><rect x="0" y="10" width="28" height="8" rx="2" fill="white"/></svg></div>
+      <div class="med-x" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="7" y="0" width="6" height="20" rx="1.5" fill="white"/><rect x="0" y="7" width="20" height="6" rx="1.5" fill="white"/></svg></div>
+      <div class="med-x" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="9" y="0" width="6" height="24" rx="2" fill="white"/><rect x="0" y="9" width="24" height="6" rx="2" fill="white"/></svg></div>
+      <div class="med-x" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="6" y="0" width="6" height="18" rx="1.5" fill="white"/><rect x="0" y="6" width="18" height="6" rx="1.5" fill="white"/></svg></div>
+      <div class="med-x" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="5" y="0" width="4" height="14" rx="1" fill="white"/><rect x="0" y="5" width="14" height="4" rx="1" fill="white"/></svg></div>
+      <div class="med-x" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="8" y="0" width="6" height="22" rx="2" fill="white"/><rect x="0" y="8" width="22" height="6" rx="2" fill="white"/></svg></div>
+
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-cols">
+
+            <!-- LEFT -->
+            <div>
+              <div class="hero-eyebrow">
+                <div class="eyebrow-dot"></div>
+                Institutional Supply Partner · Karachi, Pakistan
+              </div>
+
+              <h1 class="hero-h1">
+                Medical &amp; Pharmaceutical<br>
+                Supply for <em>Government<br>&amp; Private Institutions</em>
+              </h1>
+
+              <p class="hero-sub">
+                A documentation-led supplier built for institutional procurement environments — compliance-first, execution-driven, trusted by hospitals and health departments across Karachi and Sindh since 2004.
+              </p>
+
+              <div class="hero-btns">
+                <a class="btn-primary" href="services.html">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 3H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.8"/><path d="M19 3h-4a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 13H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.8"/><path d="M19 13h-4a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.8"/></svg>
+                  View Services
+                </a>
+                <a class="btn-ghost" href="certificates.html">
+                  Compliance Documents
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </a>
+              </div>
+
+              <div class="hero-trust">
+                <span class="trust-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg> ISO 9001:2015</span>
+                <span class="trust-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg> ISO 13485:2016</span>
+                <span class="trust-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg> Drug Licensed</span>
+                <span class="trust-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg> KCCI Member</span>
+                <span class="trust-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg> FBR Registered</span>
+              </div>
+            </div>
+
+            <!-- RIGHT CARD -->
+            <div>
+              <div class="hero-card">
+                <div class="hero-card-head">
+                  <div class="hero-card-title">Procurement Pathways</div>
+                  <div class="hero-card-sub">Government &amp; Private institutions — both pathways available</div>
+                </div>
+                <div class="hero-card-body">
+                  <div class="procurement-row">
+                    <a class="proc-btn proc-btn-a" href="contact.html">Private Institutions</a>
+                    <a class="proc-btn proc-btn-b" href="contact.html">Corporate Supply</a>
+                  </div>
+
+                  <div class="hero-note">
+                    Include item requirements, quantities, delivery location, and timeline in your inquiry for faster processing.
+                  </div>
+
+                  <div class="compliance-row">
+                    <span class="comp-chip green">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>
+                      ISO 9001:2015
+                    </span>
+                    <span class="comp-chip green">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>
+                      Drug Licensed
+                    </span>
+                    <span class="comp-chip navy">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>
+                      FBR Registered
+                    </span>
+                    <span class="comp-chip navy">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>
+                      PEC Licensed
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- STAT STRIP -->
+          <div class="hero-stats-strip" role="region" aria-label="Company statistics">
+            <div class="hstat">
+              <div class="hstat-num"><span class="count-up" data-target="20">0</span><span>+</span></div>
+              <div class="hstat-label">Years Established</div>
+            </div>
+            <div class="hstat">
+              <div class="hstat-num"><span class="count-up" data-target="50">0</span><span>+</span></div>
+              <div class="hstat-label">Institutional Clients</div>
+            </div>
+            <div class="hstat">
+              <div class="hstat-num"><span class="count-up" data-target="100">0</span><span>+</span></div>
+              <div class="hstat-label">Projects Delivered</div>
+            </div>
+            <div class="hstat">
+              <div class="hstat-num"><span class="count-up" data-target="7">0</span></div>
+              <div class="hstat-label">Active Certifications</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ═══════ TRUST METRICS ═══════ -->
+    <section class="section metrics-section" aria-labelledby="metrics-h">
+      <div class="container">
+        <div class="reveal" style="margin-bottom:56px;max-width:600px;">
+          <div class="s-label">Why institutions trust us</div>
+          <h2 class="s-title" id="metrics-h">Proven at institutional scale</h2>
+          <p class="s-sub">Every figure represents a relationship built on compliance, documentation, and reliable delivery.</p>
+        </div>
+
+        <div class="metrics-grid reveal">
+          <div class="metric-block">
+            <div class="metric-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 20V10a2 2 0 0 1 2-2h4V4h4v4h4a2 2 0 0 1 2 2v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 20v-5M12 20v-5M16 20v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="metric-n"><span class="count-up" data-target="50">0</span><span class="plus">+</span></div>
+            <div class="metric-lbl">Client Institutions</div>
+            <div class="metric-desc">Government hospitals, NGOs, and private health bodies across Sindh.</div>
+          </div>
+          <div class="metric-block">
+            <div class="metric-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div class="metric-n"><span class="count-up" data-target="100">0</span><span class="plus">+</span></div>
+            <div class="metric-lbl">Projects Delivered</div>
+            <div class="metric-desc">Procurement orders fulfilled on-time with documented compliance.</div>
+          </div>
+          <div class="metric-block">
+            <div class="metric-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="metric-n"><span class="count-up" data-target="20">0</span><span class="plus">+</span></div>
+            <div class="metric-lbl">Years Active</div>
+            <div class="metric-desc">Established 2004. Sustained institutional supply chain presence.</div>
+          </div>
+          <div class="metric-block">
+            <div class="metric-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="2"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="metric-n"><span class="count-up" data-target="7">0</span></div>
+            <div class="metric-lbl">Active Licenses</div>
+            <div class="metric-desc">ISO, Drug, Food, FBR, KCCI, PEC and more — all current.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ SERVICES ═══════ -->
+    <section class="section services-section" aria-labelledby="svc-h">
+      <div class="container">
+        <div class="services-header">
+          <div class="reveal">
+            <div class="s-label">Capabilities</div>
+            <h2 class="s-title" id="svc-h">Institutional supply capabilities</h2>
+          </div>
+          <a class="btn-ghost reveal" href="services.html" style="white-space:nowrap;">
+            View All Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+
+        <div class="services-grid">
+          <article class="svc-card reveal">
+            <div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.7"/><path d="M19 3h-4a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.7"/><path d="M9 13H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.7"/><path d="M19 13h-4a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.7"/></svg></div>
+            <div class="svc-h">Pharmaceutical Supply</div>
+            <div class="svc-sub">Wholesale distribution</div>
+            <div class="svc-body">License-aligned supply pathway for institutional pharmaceutical requirements, sourced through verified channels.</div>
+          </article>
+
+          <article class="svc-card reveal reveal-1">
+            <div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2Z" stroke="currentColor" stroke-width="1.7"/><path d="M3 22c0-4.4 4-8 9-8s9 3.6 9 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+            <div class="svc-h">Medical Devices &amp; Equipment</div>
+            <div class="svc-sub">Institutional procurement</div>
+            <div class="svc-body">Devices, equipment, and consumables aligned to institutional clinical needs, with compliance documentation.</div>
+          </article>
+
+          <article class="svc-card reveal reveal-2">
+            <div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+            <div class="svc-h">Surgical &amp; Disposable</div>
+            <div class="svc-sub">Hospitals, clinics &amp; labs</div>
+            <div class="svc-body">Surgical and disposable items for clinical and institutional use cases with reliable batch-consistent supply.</div>
+          </article>
+
+          <article class="svc-card reveal">
+            <div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="15" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="1.7"/></svg></div>
+            <div class="svc-h">Hospital Furniture</div>
+            <div class="svc-sub">Clinical environment fit</div>
+            <div class="svc-body">Furniture supply for clinical setups and institutional healthcare environments, built to specification.</div>
+          </article>
+
+          <article class="svc-card reveal reveal-1">
+            <div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 7h13v10H3V7Z" stroke="currentColor" stroke-width="1.7"/><path d="M16 10h3l2 2v5h-5v-7Z" stroke="currentColor" stroke-width="1.7"/><circle cx="7" cy="19" r="1.5" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="19" r="1.5" stroke="currentColor" stroke-width="1.7"/></svg></div>
+            <div class="svc-h">Logistics &amp; Distribution</div>
+            <div class="svc-sub">Controlled delivery model</div>
+            <div class="svc-body">Structured distribution support for institutional procurement operations with documented chain of custody.</div>
+          </article>
+
+          <article class="svc-card reveal reveal-2">
+            <div class="svc-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.7"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+            <div class="svc-h">General &amp; Food Supply</div>
+            <div class="svc-sub">Within licensed scope</div>
+            <div class="svc-body">General and food supply support aligned to Sindh Food Authority licensing scope and institutional requirements.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ COMPLIANCE / TRUST ═══════ -->
+    <section class="section compliance-section" aria-labelledby="comp-h">
+      <div class="container">
+        <div class="compliance-grid">
+          <div class="reveal">
+            <div class="s-label">Documentation</div>
+            <h2 class="s-title" id="comp-h">Documentation-led legitimacy</h2>
+            <p class="s-sub" style="margin-bottom:32px;">Certificates and licenses are presented for institutional verification. Our documentation supports full procurement due diligence for government and private entities.</p>
+            <a class="btn-primary" href="certificates.html">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2" stroke="currentColor" stroke-width="2"/></svg>
+              Open Certificates Page
+            </a>
+          </div>
+
+          <div class="reveal reveal-1">
+            <ul class="cert-list" aria-label="Active certifications">
+              <li class="cert-item">
+                <div class="cert-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div>
+                <div><div class="cert-name">ISO 9001:2015</div><div class="cert-validity">Quality Management · Valid through 16-Jun-2028</div></div>
+              </li>
+              <li class="cert-item">
+                <div class="cert-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div>
+                <div><div class="cert-name">ISO 13485:2016</div><div class="cert-validity">Medical Devices QMS · Valid through 16-Jun-2028</div></div>
+              </li>
+              <li class="cert-item">
+                <div class="cert-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div>
+                <div><div class="cert-name">Drug Wholesale License</div><div class="cert-validity">Active · 08-Feb-2023 → 07-Feb-2028</div></div>
+              </li>
+              <li class="cert-item">
+                <div class="cert-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div>
+                <div><div class="cert-name">Sindh Food Authority License</div><div class="cert-validity">Active · 16-Oct-2025 → 15-Oct-2026</div></div>
+              </li>
+              <li class="cert-item">
+                <div class="cert-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div>
+                <div><div class="cert-name">KCCI Membership &amp; PEC License</div><div class="cert-validity">Active registrations — see Certificates page</div></div>
+              </li>
+              <li class="cert-item">
+                <div class="cert-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg></div>
+                <div><div class="cert-name">FBR Taxpayer Registration</div><div class="cert-validity">Active · National Tax Number registered</div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ CEO SECTION ═══════ -->
+    <section class="section ceo-section" aria-labelledby="ceo-h">
+      <div class="container">
+        <div class="ceo-grid">
+          <div class="ceo-portrait reveal">
+            <img src="assets/images/dr_wali.png" alt="Dr. Wali Muhammad — Chief Executive Officer, Haq Enterprises" loading="lazy"/>
+            <div class="ceo-portrait-card" aria-label="33+ years experience">
+              <div class="ceo-card-val">33<span style="font-size:22px;color:var(--gold);">+</span></div>
+              <div class="ceo-card-lbl">Years Experience</div>
+            </div>
+          </div>
+          <div class="reveal reveal-1">
+            <div class="s-label">Leadership</div>
+            <h2 class="ceo-name" id="ceo-h">Dr. Wali Muhammad</h2>
+            <div class="ceo-role">Chief Executive Officer</div>
+            <p class="ceo-body">With over 33 years of experience in the medical supply industry, Dr. Wali Muhammad has led Haq Enterprises to become one of Karachi's most trusted medical and pharmaceutical suppliers. His commitment to quality, reliability, and institutional compliance has established the company as a preferred partner for leading hospitals and health departments across Sindh.</p>
+            <p class="ceo-body">Under his leadership, Haq Enterprises has built strong relationships with both national and international suppliers, ensuring the highest quality products reach healthcare facilities through structured, documented pathways.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;">
+              <a class="btn-primary" href="contact.html">Corporate Medical Supply Inquiries</a>
+              <a class="btn-ghost" href="about.html">Company Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ WHY CHOOSE US ═══════ -->
+    <section class="section why-section" aria-labelledby="why-h">
+      <div class="container">
+        <div class="reveal" style="max-width:560px;">
+          <div class="s-label">Differentiators</div>
+          <h2 class="s-title" id="why-h">Why institutions choose Haq Enterprises</h2>
+          <p class="s-sub">Six pillars that define our institutional supply model — built around trust, structure, and procurement clarity.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="why-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" stroke="currentColor" stroke-width="2"/><path d="M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2 2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2Z" stroke="currentColor" stroke-width="2"/><path d="M9 12h6M9 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="why-h">Documentation-Led Operations</div>
+            <div class="why-body">Every supply transaction is supported by proper documentation — from initial inquiry through delivery and compliance verification.</div>
+          </div>
+          <div class="why-card reveal reveal-1">
+            <div class="why-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Z" stroke="currentColor" stroke-width="2"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="why-h">ISO-Certified Quality Management</div>
+            <div class="why-body">ISO 9001:2015 and ISO 13485:2016 certified — giving procurement officers verified assurance of quality standards.</div>
+          </div>
+          <div class="why-card reveal reveal-2">
+            <div class="why-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 20V10a2 2 0 0 1 2-2h4V4h4v4h4a2 2 0 0 1 2 2v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="why-h">Institutional Experience</div>
+            <div class="why-body">20+ years serving government hospitals, provincial health departments, and institutional procurement bodies across Sindh.</div>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div class="why-h">Regulatory Compliance</div>
+            <div class="why-body">Drug wholesale licensed, Sindh Food Authority approved, FBR registered — full regulatory compliance for institutional procurement.</div>
+          </div>
+          <div class="why-card reveal reveal-1">
+            <div class="why-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="why-h">Dual-Sector Capability</div>
+            <div class="why-body">Structured pathways for both government institutions and private sector procurement — with dedicated routing for each.</div>
+          </div>
+          <div class="why-card reveal reveal-2">
+            <div class="why-ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div class="why-h">Province-Wide Reach</div>
+            <div class="why-body">Active supply relationships across Karachi and all of Sindh — from metropolitan hospitals to district health offices.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ CLIENTS PREVIEW ═══════ -->
+    <section class="section clients-section" aria-labelledby="clients-h">
+      <div class="container">
+        <div class="clients-preview">
+          <div class="reveal">
+            <div class="s-label">Client Portfolio</div>
+            <h2 class="s-title" id="clients-h">Trusted by Pakistan's leading institutions</h2>
+          </div>
+          <a class="btn-ghost reveal" href="clients.html">
+            Full Client List
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+
+        <div class="abbr-wall reveal">
+          <div class="abbr-cell"><div class="abbr-code">JPMC</div><div class="abbr-name">Jinnah Postgraduate Medical Centre</div></div>
+          <div class="abbr-cell"><div class="abbr-code">NICH</div><div class="abbr-name">National Institute of Child Health</div></div>
+          <div class="abbr-cell"><div class="abbr-code">SICHN</div><div class="abbr-name">Sindh Inst. Child Health &amp; Neonatology</div></div>
+          <div class="abbr-cell"><div class="abbr-code">SEESI</div><div class="abbr-name">Sindh Employee Social Security Inst.</div></div>
+          <div class="abbr-cell"><div class="abbr-code">LUH</div><div class="abbr-name">Liaquat University Hospital Hyderabad</div></div>
+          <div class="abbr-cell"><div class="abbr-code">PPHI</div><div class="abbr-name">People's Primary Healthcare Initiative</div></div>
+          <div class="abbr-cell"><div class="abbr-code">SBB</div><div class="abbr-name">SBB Accident &amp; Emergency Trauma Centre</div></div>
+          <div class="abbr-cell"><div class="abbr-code">CMCH</div><div class="abbr-name">Chandka Medical College Hospital</div></div>
+          <div class="abbr-cell"><div class="abbr-code">GMMMC</div><div class="abbr-name">G.M. Mahar Medical College Hospital</div></div>
+          <div class="abbr-cell"><div class="abbr-code">PMCH</div><div class="abbr-name">Peoples Medical College Nawabshah</div></div>
+          <div class="abbr-cell"><div class="abbr-code">SASIMS</div><div class="abbr-name">Syed Abdullah Shah Inst. Med. Sciences</div></div>
+          <div class="abbr-cell"><div class="abbr-code">DHO</div><div class="abbr-name">District Health Officer (All Sindh)</div></div>
+        </div>
+
+        <div style="text-align:center;margin-top:32px;" class="reveal">
+          <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.35);margin-bottom:20px;">50+ institutional clients across Karachi and Sindh — government, private, and NGO</p>
+          <a class="btn-primary" href="clients.html">View Complete Client List</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ CTA ═══════ -->
+    <section class="section cta-section" aria-labelledby="cta-h">
+      <div class="container">
+        <div class="cta-card reveal">
+          <div class="cta-orb" aria-hidden="true"></div>
+          <div class="cta-inner">
+            <div>
+              <div class="s-label" style="margin-bottom:16px;">Start a partnership</div>
+              <h2 class="cta-h" id="cta-h">Government &amp; Private Institutions are welcome</h2>
+              <p class="cta-sub">Hospitals, clinics, laboratories, NGOs, corporates and institutions can contact us for supply inquiries with full documentation and compliance support.</p>
+            </div>
+            <div class="cta-btns">
+              <a class="btn-primary" href="contact.html" style="justify-content:center;">Private Institutions — Contact Us</a>
+              <a class="btn-ghost" href="contact.html" style="justify-content:center;">Corporate Medical Supply Inquiries</a>
+              <div class="cta-note">Documented · Compliant · Trusted</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-brand-mark">H</div>
+            <div>
+              <div class="footer-brand-name">Haq Enterprises</div>
+              <div class="footer-brand-sub">Medical · Pharmaceutical · General Supplies</div>
+            </div>
+          </div>
+          <p class="footer-desc">A documentation-led institutional supplier for government and private hospitals, clinics, NGOs, and procurement departments across Karachi and Sindh.</p>
+          <div class="footer-addr">Bungalow 235-C, PECHS Block-2<br>Karachi, Sindh, Pakistan<br>Established 2004</div>
+          <div class="cert-strip">
+            <span class="cert-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>ISO 9001:2015</span>
+            <span class="cert-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>ISO 13485:2016</span>
+            <span class="cert-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2.5"/></svg>Drug Licensed</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div>
+            <div class="footer-col-h">Company</div>
+            <a class="footer-link" href="about.html">About</a>
+            <a class="footer-link" href="team.html">Team</a>
+            <a class="footer-link" href="certificates.html">Certificates</a>
+          </div>
+          <div>
+            <div class="footer-col-h">Operations</div>
+            <a class="footer-link" href="services.html">Services</a>
+            <a class="footer-link" href="clients.html">Clients</a>
+            <a class="footer-link" href="suppliers.html">Suppliers</a>
+          </div>
+          <div>
+            <div class="footer-col-h">Contact</div>
+            <a class="footer-link" href="contact.html">Procurement Inquiry</a>
+            <a class="footer-link" href="contact.html">Private Institutions</a>
+            <a class="footer-link" href="contact.html">Corporate Supply</a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-hr"/>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2025 Haq Enterprises. All rights reserved.</div>
+        <div class="footer-copy">Built for trust, compliance, and enterprise procurement.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    "use strict";
+
+    /* ── Scroll reveal ── */
+    var revealEls = Array.from(document.querySelectorAll(".reveal"));
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -36px 0px" });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add("visible"); });
+    }
+
+    /* ── Animated counters ── */
+    var counters = Array.from(document.querySelectorAll(".count-up"));
+    function animateCounter(el) {
+      var target = parseInt(el.getAttribute("data-target"), 10);
+      var dur = 1800;
+      var start = performance.now();
+      (function tick(now) {
+        var p = Math.min((now - start) / dur, 1);
+        var ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(ease * target);
+        if (p < 1) requestAnimationFrame(tick);
+        else el.textContent = target;
+      })(start);
+    }
+
+    if ("IntersectionObserver" in window) {
+      var cio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { animateCounter(e.target); cio.unobserve(e.target); }
+        });
+      }, { threshold: 0.4 });
+      counters.forEach(function (c) { cio.observe(c); });
+    } else {
+      counters.forEach(function (c) { c.textContent = c.getAttribute("data-target"); });
+    }
+
+    /* ── Very light mouse parallax on hero ── */
+    var hero = document.querySelector(".hero");
+    var orbs = document.querySelectorAll(".orb");
+    if (hero && orbs.length) {
+      document.addEventListener("mousemove", function (e) {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        var rx = (e.clientX / window.innerWidth - 0.5) * 2;
+        var ry = (e.clientY / window.innerHeight - 0.5) * 2;
+        orbs.forEach(function (o, i) {
+          var s = (i + 1) * 6;
+          o.style.transform = "translate(" + rx * s + "px, " + ry * s + "px)";
+        });
+      });
+    }
+
+  })();
+  </script>
+
+</body>
+</html>

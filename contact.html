@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#001122"/>
+  <title>Haq Enterprises — Contact Us</title>
+  <meta name="description" content="Institutional procurement contact for Haq Enterprises. Government hospitals, private clinics, laboratories, NGOs, corporates and institutions across Pakistan can submit medical, pharmaceutical and general supply inquiries with full documentation support."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="contact.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    /* ═══════════════════════════════════════════════════════
+       HAQ ENTERPRISES — CONTACT PAGE
+       System: Dark Institutional Luxury (100% identical to About page)
+       Advanced CSS Grid Architecture – 2026 Enterprise Standard
+    ═══════════════════════════════════════════════════════ */
+    :root {
+      --ink: #040810;
+      --ink-2: #090e1a;
+      --ink-3: #0f1828;
+      --navy: #001F3F;
+      --navy-2: #002a56;
+      --navy-3: #003470;
+      --forest: #012a1a;
+      --forest-2: #013d26;
+      --forest-3: #016040;
+      --platinum: #dde4ed;
+      --gold: #c9a84c;
+      --gold-2: #e2c26a;
+      --gold-light: #f5e6b8;
+      --white: #ffffff;
+      --glass: rgba(255,255,255,0.045);
+      --glass-2: rgba(255,255,255,0.08);
+      --glass-b: rgba(255,255,255,0.10);
+      --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--ink); color: var(--platinum); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--ink-2); }
+    ::-webkit-scrollbar-thumb { background: var(--navy-3); border-radius: 3px; }
+    ::selection { background: rgba(201,168,76,0.25); color: var(--white); }
+    a { text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1260px; margin: 0 auto; padding: 0 40px; }
+    .section { padding: 100px 0; }
+    @media (max-width:768px) { .container { padding: 0 20px; } .section { padding: 72px 0; } }
+
+    /* ── Nav ── (identical to About) */
+    .nav { position: sticky; top: 0; z-index: 999; background: rgba(4,8,16,0.88); backdrop-filter: blur(20px) saturate(160%); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; }
+    .nav-brand-name { font-size: 15px; font-weight: 700; color: var(--white); line-height: 1; }
+    .nav-brand-sub { font-size: 10px; color: rgba(255,255,255,0.38); letter-spacing: 0.05em; margin-top: 3px; }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a { padding: 8px 13px; border-radius: 8px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.55); transition: color .2s, background .2s; }
+    .nav-links a:hover { color: var(--white); background: var(--glass); }
+    .nav-links a.active { color: var(--white); background: var(--glass-2); }
+    .nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; border-radius: 9px; background: linear-gradient(135deg, var(--forest-2), var(--navy-2)); color: var(--white); font-size: 13px; font-weight: 600; border: 1px solid rgba(255,255,255,0.13); box-shadow: 0 4px 14px rgba(0,0,0,0.35); transition: transform .2s var(--ease), box-shadow .2s; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.45); color: var(--white); }
+    @media (max-width:900px) { .nav-links { display: none; } .nav-cta { display: none; } }
+
+    /* ── Typography ── (identical) */
+    .s-label { display: inline-flex; align-items: center; gap: 10px; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .s-label::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+    .s-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4.5vw, 54px); font-weight: 600; line-height: 1.07; letter-spacing: -0.02em; color: var(--white); margin-bottom: 16px; }
+    .s-sub { font-size: 16px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.42); }
+
+    /* ── Buttons ── (identical) */
+    .btn-primary { display: inline-flex; align-items: center; gap: 9px; padding: 14px 26px; border-radius: 10px; background: linear-gradient(135deg, var(--forest-2), var(--navy-2)); color: var(--white); font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 600; border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 8px 28px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08); transition: transform .25s var(--ease), box-shadow .25s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 50px rgba(1,61,38,0.25); color: var(--white); }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 9px; padding: 14px 26px; border-radius: 10px; background: var(--glass); border: 1px solid var(--glass-b); color: rgba(255,255,255,0.7); font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 600; transition: color .2s, background .2s, transform .2s; }
+    .btn-ghost:hover { color: var(--white); background: var(--glass-2); transform: translateY(-2px); }
+
+    /* ── Reveal ── (identical) */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-1 { transition-delay: .10s; } .reveal-2 { transition-delay: .20s; } .reveal-3 { transition-delay: .30s; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } * { animation: none !important; } }
+
+    /* ══════════════════════════════════════ HERO ══════════════════════════════════════ */
+    .page-hero { position: relative; overflow: hidden; padding: 120px 0 100px; min-height: 50vh; display: flex; align-items: center; }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 90% 80% at 50% -10%, rgba(0,52,112,0.72), transparent 58%), radial-gradient(ellipse 60% 50% at 0% 90%, rgba(1,61,38,0.5), transparent 55%), radial-gradient(ellipse 50% 45% at 100% 80%, rgba(0,32,63,0.55), transparent 55%), linear-gradient(180deg, #050a14 0%, #040810 60%, #060d10 100%); }
+    .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px); background-size: 72px 72px; mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 15%, transparent 72%); }
+    .hero-orb-a { position: absolute; width: 600px; height: 600px; top: -200px; right: -100px; border-radius: 50%; background: radial-gradient(circle, rgba(0,52,112,0.3), transparent 65%); filter: blur(80px); pointer-events: none; animation: driftA 22s ease-in-out infinite alternate; }
+    .hero-orb-b { position: absolute; width: 400px; height: 400px; bottom: -80px; left: -60px; border-radius: 50%; background: radial-gradient(circle, rgba(1,61,38,0.28), transparent 65%); filter: blur(70px); pointer-events: none; animation: driftB 28s ease-in-out infinite alternate-reverse; }
+    @keyframes driftA { from{transform:translate(0,0)} to{transform:translate(30px,20px)} }
+    @keyframes driftB { from{transform:translate(0,0)} to{transform:translate(-25px,15px)} }
+    .hero-content { position: relative; z-index: 2; width: 100%; }
+    .hero-inner { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: end; }
+    @media (max-width:768px) { .hero-inner { grid-template-columns: 1fr; } }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 7px 16px; border-radius: 999px; border: 1px solid rgba(201,168,76,0.28); background: rgba(201,168,76,0.07); font-size: 11px; font-weight: 600; color: var(--gold-light); letter-spacing: 0.13em; text-transform: uppercase; margin-bottom: 24px; animation: slideUp 0.9s var(--ease-out) both; }
+    .eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); animation: blink 2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.35} }
+    .hero-h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 6.5vw, 80px); font-weight: 600; line-height: 1.02; letter-spacing: -0.025em; color: var(--white); margin-bottom: 20px; animation: slideUp 0.9s var(--ease-out) 0.1s both; }
+    .hero-h1 em { font-style: italic; background: linear-gradient(130deg, var(--gold-light), var(--gold), #d4a83a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub { font-size: 17px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.48); max-width: 540px; animation: slideUp 0.9s var(--ease-out) 0.2s both; }
+    @keyframes slideUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:none} }
+
+    /* ══════════════════════════════════════ ADVANCED CSS GRID MASTER LAYOUT ══════════════════════════════════════ */
+    .contact-master-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 80px;
+      align-items: start;
+      grid-template-areas:
+        "info   form"
+        "map    map"
+        "cta    cta";
+    }
+    @media (max-width:900px) {
+      .contact-master-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .contact-master-grid {
+        grid-template-areas:
+          "info"
+          "form"
+          "map"
+          "cta";
+      }
+    }
+
+    /* Subgrid for internal contact details */
+    .contact-info-grid {
+      display: grid;
+      grid-template-columns: subgrid;
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* Premium form card with glass + depth */
+    .form-card {
+      background: var(--glass-2);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 28px;
+      backdrop-filter: blur(24px);
+      padding: 52px 48px;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.08);
+      transition: transform .4s var(--ease-out), box-shadow .4s var(--ease-out);
+    }
+    .form-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 50px 120px rgba(0,0,0,0.6);
+    }
+
+    .premium-input {
+      width: 100%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: var(--platinum);
+      border-radius: 16px;
+      padding: 18px 24px;
+      font-size: 15.5px;
+      transition: all .3s var(--ease);
+    }
+    .premium-input:focus {
+      border-color: var(--gold);
+      background: rgba(255,255,255,0.14);
+      box-shadow: 0 0 0 4px rgba(201,168,76,0.25);
+      transform: translateY(-1px);
+    }
+    .premium-input::placeholder { color: rgba(255,255,255,0.4); }
+
+    /* Contact card */
+    .contact-card {
+      background: rgba(9,14,26,0.75);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent);
+    }
+
+    /* Map card */
+    .map-card {
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+    }
+
+    /* CTA card (identical to About) */
+    .cta-card { position: relative; overflow: hidden; border-radius: 28px; border: 1px solid rgba(255,255,255,0.10); padding: 80px 64px; text-align: center; background: linear-gradient(145deg, rgba(0,52,112,0.5), rgba(1,61,38,0.38) 50%, rgba(4,8,16,0.9)); }
+    .cta-card::before { content:''; position:absolute; top:-1px; left:10%; right:10%; height:1px; background:linear-gradient(90deg,transparent,rgba(201,168,76,0.55),transparent); }
+    .cta-orb { position:absolute; width:500px; height:500px; right:-150px; top:-150px; border-radius:50%; background:radial-gradient(circle,rgba(0,52,112,0.28),transparent 65%); filter:blur(60px); pointer-events:none; }
+    .cta-inner { position:relative; z-index:1; max-width:600px; margin:0 auto; }
+    .cta-h { font-family:'Cormorant Garamond',serif; font-size:clamp(30px,4vw,48px); font-weight:600; color:var(--white); letter-spacing:-0.02em; margin-bottom:14px; line-height:1.1; }
+    .cta-sub { font-size:15px; font-weight:300; line-height:1.75; color:rgba(255,255,255,0.48); margin-bottom:36px; }
+    .cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+    .cta-note { font-size:11px; font-weight:600; color:rgba(255,255,255,0.25); letter-spacing:0.09em; text-transform:uppercase; margin-top:20px; }
+
+    /* Footer */
+    .footer { background: var(--ink-2, #090e1a); border-top: 1px solid rgba(255,255,255,0.06); padding: 40px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand" aria-label="Haq Enterprises Home">
+          <img src="assets/images/logo.png" alt="Haq Enterprises mark" width="44" height="44" loading="eager" style="border-radius:10px;">
+          <div>
+            <div class="nav-brand-name">Haq Enterprises</div>
+            <div class="nav-brand-sub">Medical · Pharmaceutical · General Supplies</div>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="suppliers.html">Suppliers</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="nav-cta">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="2"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="2"/></svg>
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- HERO – identical premium style -->
+    <header class="page-hero" aria-label="Contact page header">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orb-a" aria-hidden="true"></div>
+      <div class="hero-orb-b" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-inner">
+          <div>
+            <div class="hero-eyebrow"><div class="eyebrow-dot"></div>INSTITUTIONAL PROCUREMENT CHANNEL</div>
+            <h1 class="hero-h1">Get in touch with<br><em>trusted supply.</em></h1>
+            <p class="hero-sub">Government hospitals, private institutions, clinics, laboratories, NGOs and corporates across Pakistan are invited to submit procurement inquiries. All communications are handled with full documentation and ISO-certified compliance.</p>
+          </div>
+          <div style="animation: slideUp 0.9s var(--ease-out) 0.25s both;">
+            <a class="btn-primary" href="#contact-form">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Submit Inquiry
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MASTER ADVANCED GRID LAYOUT -->
+    <section class="section" aria-labelledby="contact-h">
+      <div class="container">
+        <div class="contact-master-grid">
+
+          <!-- INFO BLOCK – left column -->
+          <div class="reveal" style="grid-area:info">
+            <div class="s-label">Direct Institutional Contact</div>
+            <h2 class="s-title" id="contact-h">Reach Haq Enterprises</h2>
+            <p class="story-body" style="margin-bottom:40px;">Every inquiry is treated as a formal procurement request. Documentation-led response within 24–48 hours.</p>
+
+            <div class="contact-card">
+              <div class="contact-visual" style="position:relative;border-radius:24px;overflow:hidden;background:linear-gradient(145deg,rgba(0,52,112,0.45),rgba(1,61,38,0.3)50%,rgba(9,14,26,0.9));padding:40px;margin-bottom:32px;">
+                <div class="sv-grid" style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.018)1px,transparent 1px);background-size:40px 40px;"></div>
+                <div class="sv-orb" style="position:absolute;width:260px;height:260px;top:-60px;right:-40px;border-radius:50%;background:radial-gradient(circle,rgba(0,52,112,0.35),transparent 65%);filter:blur(55px);"></div>
+                <div class="sv-orb2" style="position:absolute;width:200px;height:200px;bottom:-30px;left:-30px;border-radius:50%;background:radial-gradient(circle,rgba(1,61,38,0.3),transparent 65%);filter:blur(45px);"></div>
+                <div class="sv-yr">KARACHI • PAKISTAN</div>
+                <div class="sv-badge"><div class="sv-badge-dot"></div>ISO CERTIFIED • LICENSED</div>
+                <div class="sv-h" style="font-size:26px;margin-bottom:8px;">Your procurement partner since 2004</div>
+                <div class="sv-sub">All institutional requests receive full batch records, quality declarations and compliance documentation.</div>
+              </div>
+
+              <!-- Subgrid for contact items -->
+              <div class="contact-info-grid">
+                <div class="contact-item" style="display:flex;align-items:flex-start;gap:18px;">
+                  <div class="sa-ico" aria-hidden="true" style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,rgba(0,52,112,0.5),rgba(1,61,38,0.4));border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--gold-light);flex-shrink:0;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg>
+                  </div>
+                  <div>
+                    <div class="sa-h">Head Office</div>
+                    <div class="sa-t">Bungalow # C-235, Block-02, P.E.C.H.S, Karachi, Pakistan</div>
+                  </div>
+                </div>
+                <div class="contact-item" style="display:flex;align-items:flex-start;gap:18px;">
+                  <div class="sa-ico" aria-hidden="true" style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,rgba(0,52,112,0.5),rgba(1,61,38,0.4));border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--gold-light);flex-shrink:0;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.68 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l1.09-1.08a2 2 0 0 1 2.11-.45c.91.33 1.85.55 2.81.68a2 2 0 0 1 1.72 2.03z" stroke="currentColor" stroke-width="1.8"/></svg>
+                  </div>
+                  <div>
+                    <div class="sa-h">Procurement Hotline</div>
+                    <div class="sa-t">0311-1076235 &nbsp;&nbsp;&nbsp; 0314-2170043</div>
+                  </div>
+                </div>
+                <div class="contact-item" style="display:flex;align-items:flex-start;gap:18px;">
+                  <div class="sa-ico" aria-hidden="true" style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,rgba(0,52,112,0.5),rgba(1,61,38,0.4));border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--gold-light);flex-shrink:0;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="1.8"/></svg>
+                  </div>
+                  <div>
+                    <div class="sa-h">Institutional Email</div>
+                    <div class="sa-t"><a href="mailto:haqwithsmile@gmail.com" style="color:var(--gold-light);">haqwithsmile@gmail.com</a></div>
+                  </div>
+                </div>
+                <div class="contact-item" style="display:flex;align-items:flex-start;gap:18px;">
+                  <div class="sa-ico" aria-hidden="true" style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,rgba(0,52,112,0.5),rgba(1,61,38,0.4));border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--gold-light);flex-shrink:0;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  </div>
+                  <div>
+                    <div class="sa-h">Business Hours</div>
+                    <div class="sa-t">Monday – Saturday 09:00 – 18:00 PKT</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM BLOCK – right column -->
+          <div class="reveal reveal-1" id="contact-form" style="grid-area:form">
+            <div class="form-card">
+              <div class="s-label">Institutional Inquiry</div>
+              <h2 class="s-title" style="font-size:32px;line-height:1.1;margin-bottom:12px;">Submit Your Procurement Request</h2>
+              <p class="s-sub" style="margin-bottom:32px;">All fields are required for government and private institutions. Your request will be processed with full documentation support.</p>
+
+              <form id="contactForm" novalidate>
+                <div class="row g-3" style="margin:0 -12px;">
+                  <div class="col-md-6" style="padding:0 12px;">
+                    <label style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.65);display:block;margin-bottom:8px;">Full Name</label>
+                    <input type="text" id="name" class="premium-input" required placeholder="Dr. / Mr. / Ms. Full Name">
+                  </div>
+                  <div class="col-md-6" style="padding:0 12px;">
+                    <label style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.65);display:block;margin-bottom:8px;">Institution / Organization</label>
+                    <input type="text" id="org" class="premium-input" required placeholder="Hospital / Clinic / Department / NGO">
+                  </div>
+                  <div class="col-12" style="padding:0 12px;">
+                    <label style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.65);display:block;margin-bottom:8px;">Email Address</label>
+                    <input type="email" id="email" class="premium-input" required placeholder="name@institution.com">
+                  </div>
+                  <div class="col-md-6" style="padding:0 12px;">
+                    <label style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.65);display:block;margin-bottom:8px;">Phone Number</label>
+                    <input type="tel" id="phone" class="premium-input" placeholder="+92-311-1076235">
+                  </div>
+                  <div class="col-md-6" style="padding:0 12px;">
+                    <label style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.65);display:block;margin-bottom:8px;">Inquiry Type</label>
+                    <select id="type" class="premium-input" required>
+                      <option value="">Select Type</option>
+                      <option>Government Hospital / Department</option>
+                      <option>Private Hospital / Clinic</option>
+                      <option>Laboratory</option>
+                      <option>NGO</option>
+                      <option>Corporate / Institutional Buyer</option>
+                    </select>
+                  </div>
+                  <div class="col-12" style="padding:0 12px;">
+                    <label style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.65);display:block;margin-bottom:8px;">Requirements / Message</label>
+                    <textarea id="message" class="premium-input" rows="7" required placeholder="Please provide items, specifications, quantities, delivery location and required timeline in procurement format."></textarea>
+                  </div>
+
+                  <div class="col-12" style="padding:0 12px;margin-top:12px;">
+                    <button type="submit" class="btn-primary" style="width:100%;padding:18px 32px;font-size:15px;">
+                      SUBMIT INSTITUTIONAL INQUIRY
+                    </button>
+                    <p class="s-sub" style="text-align:center;margin-top:20px;font-size:12px;opacity:0.65;">Your inquiry is handled with complete documentation and ISO 9001 / 13485 compliance.</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- MAP SECTION -->
+          <div class="reveal" style="grid-area:map">
+            <div class="s-label">Our Location</div>
+            <h2 class="s-title">Visit or Arrange Delivery</h2>
+            <p class="s-sub">Bungalow # C-235, Block-02, P.E.C.H.S, Karachi, Pakistan</p>
+
+            <div class="map-card">
+              <div class="ratio ratio-21x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.123456789!2d67.123456789!3d24.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDA3JzM0LjAiTiA2N8KwMDcnMzQuMCJF!5e0!3m2!1sen!2spk!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Haq Enterprises Location Map"></iframe>
+              </div>
+              <div style="padding:28px 40px;font-size:14px;color:rgba(255,255,255,0.7);display:flex;justify-content:space-between;align-items:center;">
+                Bungalow # C-235, Block-02, P.E.C.H.S, Karachi, Pakistan
+                <a href="https://www.google.com/maps?q=Bungalow+C-235+Block-02+PECHS+Karachi" target="_blank" class="btn-ghost" style="margin:0;">Open in Google Maps →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- FINAL CTA -->
+          <div class="reveal" style="grid-area:cta">
+            <div class="cta-card">
+              <div class="cta-orb" aria-hidden="true"></div>
+              <div class="cta-inner">
+                <div class="s-label" style="justify-content:center;">Ready to Procure?</div>
+                <h2 class="cta-h">Government &amp; Private Institutions Welcome</h2>
+                <p class="cta-sub">Hospitals, clinics, laboratories, NGOs, corporates and institutions can contact us for verified, documented medical, pharmaceutical and general supply support.</p>
+                <div class="cta-btns">
+                  <a class="btn-primary" href="#contact-form">Submit Inquiry Now</a>
+                  <a class="btn-ghost" href="certificates.html">View Compliance Documents</a>
+                </div>
+                <div class="cta-note">Verified · Documented · Trusted since 2004</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">© 2025 Haq Enterprises. All rights reserved.</div>
+        <div class="footer-copy">Built for trust, compliance, and enterprise procurement.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    "use strict";
+    var revealEls = Array.from(document.querySelectorAll(".reveal"));
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
+      }, { threshold: 0.07, rootMargin: "0px 0px -28px 0px" });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else { revealEls.forEach(function (el) { el.classList.add("visible"); }); }
+
+    // Premium form success animation
+    const form = document.getElementById("contactForm");
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const btn = this.querySelector("button");
+        const original = btn.innerHTML;
+        btn.style.transition = "all .4s var(--ease)";
+        btn.innerHTML = `Inquiry Received <span style="margin-left:8px;">✓</span>`;
+        setTimeout(() => {
+          alert("Thank you. Your institutional inquiry has been received and will be processed within 24–48 hours with full documentation.");
+          form.reset();
+          btn.innerHTML = original;
+        }, 1800);
+      });
+    }
+  })();
+  </script>
+</body>
+</html>
